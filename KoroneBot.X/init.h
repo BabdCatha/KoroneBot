@@ -1,5 +1,9 @@
 #ifndef INIT_H
 #define	INIT_H
 
-void initClock();
-void initPWM();
+#include <p18f2520.h>
+
+void initClock(void);
+void initPWM(void);
+
+#endif

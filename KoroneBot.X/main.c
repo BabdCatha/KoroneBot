@@ -7,7 +7,7 @@
 #pragma config OSC = INTIO67
 #pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
 
-int main(int argc, char** argv) {
+void main(void) {
 
     
 

@@ -1,6 +1,6 @@
 #include "init.h"
 
-void initClock(){
+void initClock(void){
 
     //On regle la frequence d'horloge sur 8MHz
     OSCCONbits.IRCF0 = 0;
@@ -9,7 +9,7 @@ void initClock(){
 
 }
 
-void initPWM(){
+void initPWM(void){
 
     //On met la valeur du prescaler a 16
     T2CONbits.T2CKPS1 = 1;
