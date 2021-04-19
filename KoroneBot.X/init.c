@@ -3,7 +3,7 @@
 void initClock(void){
 
     //On regle la frequence d'horloge sur 8MHz
-    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.IRCF0 = 1;
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
 
@@ -15,6 +15,7 @@ void initPWM(void){
     T2CONbits.T2CKPS1 = 1;
     T2CONbits.T2CKPS0 = 0;
 
+    //Valeur calculee auparavant
     PR2 = 124;
 
     //On met les broches correspondantes en mode sortie
@@ -27,6 +28,8 @@ void initPWM(void){
     //On active le mode PWM
     CCP2CONbits.CCP2M3 = 1;
     CCP2CONbits.CCP2M2 = 1;
+    CCP1CONbits.CCP1M3 = 1;
+    CCP1CONbits.CCP1M2 = 1;
 
     /*On ne tiendra pas compte des deux derniers bits
     pour le mode PWM, on perd un peu en precision,

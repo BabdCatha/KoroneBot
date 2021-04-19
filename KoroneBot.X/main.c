@@ -9,7 +9,8 @@
 
 void main(void) {
 
-    
+    initClock();
+    initPWM();
 
     return (0);
 }

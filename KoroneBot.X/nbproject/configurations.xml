@@ -60,8 +60,8 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C18>
-        <property key="code-model" value="mS"/>
-        <property key="data-model" value="Oa-"/>
+        <property key="code-model" value="ms"/>
+        <property key="data-model" value="oa-"/>
         <property key="default-char-unsigned" value="false"/>
         <property key="enable-all-optimizations" value="true"/>
         <property key="enable-int-promotion" value="false"/>
@@ -103,6 +103,9 @@
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
       <VSMViewerPlatformTool>
+        <property key="design.file" value="../../../Cours/SystD/ROBOT2_SIMU.pdsprj"/>
+        <property key="target.ip.address" value="localhost"/>
+        <property key="target.ip.port" value="8001"/>
       </VSMViewerPlatformTool>
     </conf>
   </confs>
