@@ -1,9 +1,10 @@
-
 *.o
 *.d
 *.cof
 *.map
 *.err
-*.err
-*.err
+*.mk
+*.bash
+*.xml
 KoroneBot.X/interruptions.err
+*.properties
