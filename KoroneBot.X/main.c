@@ -11,6 +11,9 @@ void main(void) {
 
     initClock();
     initPWM();
+    initADC();
+    initTimer0();
+    initInt();
 
-    return (0);
+    while(1){}
 }

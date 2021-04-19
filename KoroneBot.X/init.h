@@ -5,5 +5,8 @@
 
 void initClock(void);
 void initPWM(void);
+void initTimer0(void);
+void initADC(void);
+void initInt(void);
 
 #endif
