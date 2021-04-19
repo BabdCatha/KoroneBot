@@ -7,10 +7,22 @@
 #pragma config OSC = INTIO67
 #pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
 
+
+
+
+
 void main(void) {
 
     initClock();
     initPWM();
+    initTelecommande();
+    initInterruption();
+
+
+    while(1)
+    {
+        
+    }
 
     return (0);
 }
