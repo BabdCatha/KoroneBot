@@ -1,5 +1,12 @@
 #include "init.h"
 
+
+void initTelecommande()
+{
+    MI2CInit();
+    Ecrire_i2c_Telecom(0xA2, 0x3100);
+}
+
 void initClock(void){
 
     //On regle la frequence d'horloge sur 8MHz
