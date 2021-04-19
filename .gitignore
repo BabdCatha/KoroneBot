@@ -1,0 +1,9 @@
+
+*.o
+*.d
+*.cof
+*.map
+*.err
+*.err
+*.err
+KoroneBot.X/interruptions.err
