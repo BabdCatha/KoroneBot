@@ -1,4 +1,10 @@
 #include "interruptions.h"
+#include <stdio.h>
+
+typedef unsigned char bool;
+#define true    1
+#define false   0
+
 
 //Tension minimale de la batterie
 #define UMIN 0x9A
@@ -20,15 +26,52 @@ void IntHighVector(void)
 }
 #pragma code
 
+char tamponLectureTelecommande[3]; //pour 0x31 puis 0x3y puis 00(='\0')
+char compteurSerie=0; //jusque 20 (2s)
+
+typedef struct{
+    char phase; //1<=>phase 1; 2<=>phase2 rotation; 3<=>phase2 avanc�e rectiligne
+    bool initialisationEnCours;
+    int distanceSonar;
+    char VBat;
+}etat;
+
+etat etatGlobal={1, false, 200, 10};
+
 #pragma interrupt HighISR
 void HighISR(void)
 {
-    //Si Timer0 s'est declenche
-    if(INTCONbits.TMR0IF){
+    if(INTCONbits.INT0IF==1)
+    {
+        //I2C
+        Lire_i2c_Telecom(0xA2, tamponLectureTelecommande);
+        if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150) //signifie touche centre press�e et obstacle � plus d'1m50
+        {
+            etatGlobal.phase=1;
+            CCPR1L=1; //� remplir ep�rimentalement
+            CCPR2L=2;
+            //vitesse PWM telle que 30cm.s-1 sur chaque moteur en marche avant
+        }
+        //FIN I2C
+        INTCONbits.INT0IF=0; //doit �tre mis � 0 manuellement
+    }else if(INTCONbits.TMR0IF){
+        //Si Timer0 s'est declenche
         INTCONbits.TMR0IF = 0;
 
         //On surveille l'etat de la batterie
         survBatterie();
+      
+        //RS232
+        if(compteurSerie==20)
+        {
+            compteurSerie=0;
+            printf("Valeur batterie: %d V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBat, etatGlobal.initialisationEnCours, etatGlobal.phase);
+        }
+        else
+        {
+            compteurSerie++;
+        }
+        //FIN RS232
 
         //On recharge le Timer
         TMR0H = 0x3C;

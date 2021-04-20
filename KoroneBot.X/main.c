@@ -19,6 +19,7 @@ void main(void) {
     initTimer0();
     initTelecommande();
     initInterruption();
+    initRS232();
 
 
     while(1)

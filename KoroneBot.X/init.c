@@ -5,16 +5,35 @@ void initTelecommande()
 {
     TRISCbits.RC3=1; //SCL et SDA en entrée
     TRISCbits.RC4=1;
-    MI2CInit();
-    Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande);
+    MI2CInit(); //initialise certains param�tres I2C
+    Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande); //signifie � U4(PIC16F1824) que l'on est en mode r�ception et pas en mode test
+}
+
+void initRS232() //baud=9600, 8bits donn�es, pas de bit de parit�, un bit de stop, on ne fait que transmettre
+{
+    BAUDCONbits.BRG16=1; //baudrate en 16bits
+    TXSTAbits.SYNC=0; //mode asynchrone
+    TXSTAbits.BRGH=1; //mode grande vitesse
+
+    //3 premiers param�tres => baudrate=Fosc/(4(n+1)) o� n=SPBRGH:SPBRG
+    SPBRG=208; //baudrate=9600 b/s => n=207.33333 arrondi au sup�rieur => n=208
+    SPBRGH=0;
+    TRISCbits.RC6=1; //TX en entr�e
+    RCSTAbits.SPEN=1; //validation port s�rie
+
+
+
 }
 void initInterruption()
 {
    RCONbits.IPEN=0; //toutes les interruptions ont la même priorité
    INTCONbits.GIE=1; //autorise les interruptions
+
+   TXSTAbits.TXEN=1; //transmission s�rie autoris�e
+
    INTCONbits.PEIE=1; //autorise les interruptions périphérique
    INTCONbits.INT0IE=1; //autoriser l'interruption INT0 (commande télécommande prête à être transmise)
-    INTCONbits.TMR0IE = 1; //autoriser l'interrpution Timer0
+   INTCONbits.TMR0IE = 1; //autoriser l'interrpution Timer0
 }
 
 void initClock(void){
