@@ -3,17 +3,18 @@
 char tamponEcritureTelecommande[2]={0x31, 0x00};
 void initTelecommande()
 {
-    TRISCbits.RC3=1; //SCL et SDA en entrée
+    TRISCbits.RC3=1; //SCL et SDA en entrÃ©e
     TRISCbits.RC4=1;
     MI2CInit();
     Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande);
 }
 void initInterruption()
 {
-   RCONbits.IPEN=0; //toutes les interruptions ont la même priorité
+   RCONbits.IPEN=0; //toutes les interruptions ont la mÃªme prioritÃ©
    INTCONbits.GIE=1; //autorise les interruptions
-   INTCONbits.PEIE=1; //autorise les interruptions périphérique
-   INTCONbits.INT0IE=1; //autoriser l'interruption INT0 (commande télécommande prête à être transmise)
+   INTCONbits.PEIE=1; //autorise les interruptions pÃ©riphÃ©rique
+   INTCONbits.INT0IE=1; //autoriser l'interruption INT0 (commande tÃ©lÃ©commande prÃªte Ã  Ãªtre transmise)
+    INTCONbits.TMR0IE = 1; //autoriser l'interrpution Timer0
 }
 
 void initClock(void){
@@ -55,7 +56,7 @@ void initPWM(void){
     CCP1CONbits.DC1B1 = 0;
     CCP1CONbits.DC1B0 = 0;
 
-    //On met les deux moteurs à 0
+    //On met les deux moteurs Ã  0
     CCPR1L = 0;
     CCPR2L = 0;
 
@@ -85,14 +86,5 @@ void initADC(void){
 
     ADCON0bits.CHS = 2;
     ADCON0bits.ADON = 1;
-
-}
-
-void initInt(void){
-
-    INTCONbits.GIE = 1;
-    INTCONbits.TMR0IE = 1;
-
-    RCONbits.IPEN = 0;
 
 }
