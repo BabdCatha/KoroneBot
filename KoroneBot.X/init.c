@@ -60,3 +60,39 @@ void initPWM(void){
     CCPR2L = 0;
 
 }
+
+void initTimer0(void){
+
+    T0CONbits.T08BIT = 0;
+    T0CONbits.T0CS = 0;
+    T0CONbits.PSA = 0;
+    T0CONbits.T0PS = 1;
+
+    //On active le Timer0
+    T0CONbits.TMR0ON = 1;
+
+}
+
+void initADC(void){
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+    ADCON1bits.PCFG = 12;
+
+    ADCON2bits.ACQT = 3;
+    ADCON2bits.ADCS = 4;
+    ADCON2bits.ADFM = 0;
+
+    ADCON0bits.CHS = 2;
+    ADCON0bits.ADON = 1;
+
+}
+
+void initInt(void){
+
+    INTCONbits.GIE = 1;
+    INTCONbits.TMR0IE = 1;
+
+    RCONbits.IPEN = 0;
+
+}
