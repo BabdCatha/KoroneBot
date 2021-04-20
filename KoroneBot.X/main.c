@@ -15,6 +15,8 @@ void main(void) {
 
     initClock();
     initPWM();
+    initADC();
+    initTimer0();
     initTelecommande();
     initInterruption();
     initRS232();
@@ -25,5 +27,8 @@ void main(void) {
         
     }
 
-    return (0);
+    //On lance une premiere mesure
+    ADCON0bits.GO = 1;
+
+    while(1){}
 }
