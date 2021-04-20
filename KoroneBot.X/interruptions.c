@@ -6,8 +6,19 @@ typedef unsigned char bool;
 #define false   0
 
 
+
 //Tension minimale de la batterie
 #define UMIN 0x9A
+typedef struct{
+    char phase; //-1<=>batterie trop déchargée; 1<=>phase 1; 2<=>phase2 rotation; 3<=>phase2 avancï¿½e rectiligne
+    bool initialisationEnCours;
+    int distanceSonar;
+    unsigned char VBatNum;
+    float VBatReel;
+}etat;
+
+etat etatGlobal={0, true, 0, 12, 0.0};
+
 
 /* Variable servant a effectuer les mesures
  sur l'ADC une fois sur dix seulement*/
@@ -17,7 +28,7 @@ unsigned char compteurADC = 0;
  sur plusieurs mesures pour la batterie*/
 unsigned char nbMesures = 0;
 unsigned char mesures[4];
-unsigned char UBAT = 0;
+
 
 #pragma code HighVector=0x08
 void IntHighVector(void)
@@ -29,14 +40,6 @@ void IntHighVector(void)
 char tamponLectureTelecommande[3]; //pour 0x31 puis 0x3y puis 00(='\0')
 char compteurSerie=0; //jusque 20 (2s)
 
-typedef struct{
-    char phase; //1<=>phase 1; 2<=>phase2 rotation; 3<=>phase2 avancï¿½e rectiligne
-    bool initialisationEnCours;
-    int distanceSonar;
-    char VBat;
-}etat;
-
-etat etatGlobal={1, false, 200, 10};
 
 #pragma interrupt HighISR
 void HighISR(void)
@@ -65,7 +68,7 @@ void HighISR(void)
         if(compteurSerie==20)
         {
             compteurSerie=0;
-            printf("Valeur batterie: %d V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBat, etatGlobal.initialisationEnCours, etatGlobal.phase);
+            printf("Valeur batterie: %f V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBatReel, etatGlobal.initialisationEnCours, etatGlobal.phase);
         }
         else
         {
@@ -83,7 +86,7 @@ void survBatterie(void){
     if(compteurADC == 9){
         compteurADC = 0;
         /*On recupere la valeur precedente
-         On utilise que 8 des 10 bits disponibles*/
+         On n'utilise que 8 des 10 bits disponibles*/
         mesures[nbMesures] = ADRESH;
         nbMesures++;
 
@@ -91,14 +94,16 @@ void survBatterie(void){
         if(nbMesures == 4){
             /*On fait la moyenne de cette maniere
              pour eviter un eventuel overflow*/
-            UBAT = mesures[0]/4;
-            UBAT += mesures[1]/4;
-            UBAT += mesures[2]/4;
-            UBAT += mesures[3]/4;
+            etatGlobal.VBatNum=0;
+            etatGlobal.VBatNum += mesures[0]/4;
+            etatGlobal.VBatNum += mesures[1]/4;
+            etatGlobal.VBatNum += mesures[2]/4;
+            etatGlobal.VBatNum += mesures[3]/4;
+            etatGlobal.VBatReel = (etatGlobal.VBatNum); //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
 
             //Si la tension est trop faible
-            if(UBAT <= UMIN){
-                //TODO
+            if(etatGlobal.VBatNum <= UMIN){
+                etatGlobal.phase=-1;
             }
         }
 

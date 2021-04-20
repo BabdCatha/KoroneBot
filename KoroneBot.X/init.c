@@ -95,13 +95,13 @@ void initTimer0(void){
 
 void initADC(void){
 
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-    ADCON1bits.PCFG = 12;
+    ADCON1bits.VCFG0 = 0;//Vref+=VDD=5V
+    ADCON1bits.VCFG1 = 0;//Vref-=VSS=0V
+    ADCON1bits.PCFG = 12;//configuration des ANx en A ou D
 
     ADCON2bits.ACQT = 3;
     ADCON2bits.ADCS = 4;
-    ADCON2bits.ADFM = 0;
+    ADCON2bits.ADFM = 0;//on justifie à gauche, on ignore les deux bits de poids faible
 
     ADCON0bits.CHS = 2;
     ADCON0bits.ADON = 1;

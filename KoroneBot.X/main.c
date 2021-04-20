@@ -9,8 +9,6 @@
 
 
 
-
-
 void main(void) {
 
     initClock();
@@ -20,12 +18,7 @@ void main(void) {
     initTelecommande();
     initInterruption();
     initRS232();
-
-
-    while(1)
-    {
-        
-    }
+    //etatGlobal.initialisationEnCours=false;
 
     //On lance une premiere mesure
     ADCON0bits.GO = 1;
