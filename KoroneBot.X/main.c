@@ -17,7 +17,6 @@ void main(void) {
     initPWM();
     initADC();
     initTimer0();
-    initInt();
     initTelecommande();
     initInterruption();
 
