@@ -50,7 +50,7 @@ void initTimer0(void){
     T0CONbits.T08BIT = 0;
     T0CONbits.T0CS = 0;
     T0CONbits.PSA = 0;
-    T0CONbits.T0PS = 6;
+    T0CONbits.T0PS = 1;
 
     //On active le Timer0
     T0CONbits.TMR0ON = 1;

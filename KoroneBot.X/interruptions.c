@@ -1,5 +1,8 @@
 #include "interruptions.h"
 
+//Tension minimale de la batterie
+#define UMIN 0x9A
+
 /* Variable servant a effectuer les mesures
  sur l'ADC une fois sur dix seulement*/
 unsigned char compteurADC = 0;
@@ -28,8 +31,8 @@ void HighISR(void)
         survBatterie();
 
         //On recharge le Timer
-        TMR0H = 0x67; //Valeurs à modifier
-        TMR0L = 0x68;
+        TMR0H = 0x3C;
+        TMR0L = 0xAF;
     }
 }
 
