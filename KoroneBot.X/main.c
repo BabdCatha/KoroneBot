@@ -17,6 +17,7 @@ void main(void) {
     initPWM();
     initTelecommande();
     initInterruption();
+    initRS232();
 
 
     while(1)
