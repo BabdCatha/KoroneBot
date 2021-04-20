@@ -7,6 +7,10 @@
 #pragma config OSC = INTIO67
 #pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
 
+
+
+
+
 void main(void) {
 
     initClock();
@@ -14,6 +18,14 @@ void main(void) {
     initADC();
     initTimer0();
     initInt();
+    initTelecommande();
+    initInterruption();
+
+
+    while(1)
+    {
+        
+    }
 
     //On lance une premiere mesure
     ADCON0bits.GO = 1;
