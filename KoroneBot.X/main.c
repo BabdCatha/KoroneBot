@@ -19,6 +19,7 @@ void main(void) {
     initInterruption();
     initRS232();
     //etatGlobal.initialisationEnCours=false;
+    //etatGlobal.phase=0;
 
     //On lance une premiere mesure
     ADCON0bits.GO = 1;
