@@ -12,7 +12,7 @@ typedef unsigned char bool;
 typedef struct{
     char phase; //-1<=>batterie trop déchargée; 1<=>phase 1; 2<=>phase2 rotation; 3<=>phase2 avancï¿½e rectiligne
     bool initialisationEnCours;
-    int distanceSonar;
+    int distanceSonar; //en cm car mesure avec commande 0x51
     unsigned char VBatNum;
     float VBatReel;
     int VBatPartEnt;
@@ -61,7 +61,7 @@ void HighISR(void)
         INTCONbits.INT0IF=0; //doit ï¿½tre mis ï¿½ 0 manuellement
     }else if(INTCONbits.TMR0IF){
         //Si Timer0 s'est declenche
-        INTCONbits.TMR0IF = 0;
+        
 
         //On surveille l'etat de la batterie
         survBatterie();
@@ -78,9 +78,17 @@ void HighISR(void)
         }
         //FIN RS232
 
+        //SONAR
+        //mesure en cm car commande 0x51
+        etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
+        SONAR_Write(0xE0, 0x51); //on demande une nouvelle mesure qui sera prête à lire à la prochaine interruption TIMER0, 100ms plus tard
+        //NB: la fonction SONAR_Write s'occupe d'indiquer que l'on écrit au registre 0 du sonar, il suffit de lui spécifier la commande que l'on veut y écrire
+        //FIN SONAR
+
         //On recharge le Timer
         TMR0H = 0x3C;
         TMR0L = 0xAF;
+        INTCONbits.TMR0IF = 0; //doit être mis à 0 manuellement
     }
 }
 
@@ -102,7 +110,7 @@ void survBatterie(void){
             etatGlobal.VBatNum += mesures[2]/4;
             etatGlobal.VBatNum += mesures[3]/4;
             etatGlobal.VBatReel = ((float)etatGlobal.VBatNum)*3.2*5.0/1023.0; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
-            etatGlobal.VBatPartEnt=etatGlobal.VBatReel;
+            etatGlobal.VBatPartEnt=etatGlobal.VBatReel; //on ne peut pas printf des float car la bibliothèque ne le permet pas (cela doublerait sa taille d'implémenter cette fonctionnalité, ainsi elle n'est pas disponible pour le PIC18F2520)
             etatGlobal.VBatPartDec=(etatGlobal.VBatReel-etatGlobal.VBatPartEnt)*100; //deux chiffres après la virgule
             //Si la tension est trop faible
             if(etatGlobal.VBatNum <= UMIN){

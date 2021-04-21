@@ -1,11 +1,12 @@
 #include "init.h"
 
 char tamponEcritureTelecommande[2]={0x31, 0x00};
-void initTelecommande()
+void initTelecommandeSonar()
 {
     TRISCbits.RC3=1; //SCL et SDA en entrée
     TRISCbits.RC4=1;
     MI2CInit(); //initialise certains param�tres I2C
+    SONAR_Write(0xE0, 0x51);
     Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande); //signifie � U4(PIC16F1824) que l'on est en mode r�ception et pas en mode test
 }
 

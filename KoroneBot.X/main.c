@@ -15,7 +15,7 @@ void main(void) {
     initPWM();
     initADC();
     initTimer0();
-    initTelecommande();
+    initTelecommandeSonar();
     initInterruption();
     initRS232();
     //etatGlobal.initialisationEnCours=false;
