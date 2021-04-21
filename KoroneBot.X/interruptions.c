@@ -15,9 +15,11 @@ typedef struct{
     int distanceSonar;
     unsigned char VBatNum;
     float VBatReel;
+    int VBatPartEnt;
+    int VBatPartDec;
 }etat;
 
-etat etatGlobal={0, true, 0, 12, 0.0};
+etat etatGlobal={0, true, 0, 12, 0.0, 0, 0};
 
 
 /* Variable servant a effectuer les mesures
@@ -68,7 +70,7 @@ void HighISR(void)
         if(compteurSerie==20)
         {
             compteurSerie=0;
-            printf("Valeur batterie: %f V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBatReel, etatGlobal.initialisationEnCours, etatGlobal.phase);
+            printf("Valeur batterie: %d.%d V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBatPartEnt, etatGlobal.VBatPartDec, etatGlobal.initialisationEnCours, etatGlobal.phase);
         }
         else
         {
@@ -99,8 +101,9 @@ void survBatterie(void){
             etatGlobal.VBatNum += mesures[1]/4;
             etatGlobal.VBatNum += mesures[2]/4;
             etatGlobal.VBatNum += mesures[3]/4;
-            etatGlobal.VBatReel = (etatGlobal.VBatNum); //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
-
+            etatGlobal.VBatReel = ((float)etatGlobal.VBatNum)*3.2*5.0/1023.0; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
+            etatGlobal.VBatPartEnt=etatGlobal.VBatReel;
+            etatGlobal.VBatPartDec=(etatGlobal.VBatReel-etatGlobal.VBatPartEnt)*100; //deux chiffres après la virgule
             //Si la tension est trop faible
             if(etatGlobal.VBatNum <= UMIN){
                 etatGlobal.phase=-1;
