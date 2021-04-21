@@ -7,7 +7,7 @@ void initClock(void);
 void initPWM(void);
 void initTimer0(void);
 void initADC(void);
-void initInt(void);
+void initInterruption(void);
 void initRS232(void);
 void initTelecommandeSonar(void);
 

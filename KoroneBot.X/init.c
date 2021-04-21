@@ -1,7 +1,7 @@
 #include "init.h"
 
 char tamponEcritureTelecommande[2]={0x31, 0x00};
-void initTelecommandeSonar()
+void initTelecommandeSonar(void)
 {
     TRISCbits.RC3=1; //SCL et SDA en entrÃ©e
     TRISCbits.RC4=1;
@@ -10,7 +10,7 @@ void initTelecommandeSonar()
     Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande); //signifie ï¿½ U4(PIC16F1824) que l'on est en mode rï¿½ception et pas en mode test
 }
 
-void initRS232() //baud=9600, 8bits donnï¿½es, pas de bit de paritï¿½, un bit de stop, on ne fait que transmettre
+void initRS232(void) //baud=9600, 8bits donnï¿½es, pas de bit de paritï¿½, un bit de stop, on ne fait que transmettre
 {
     BAUDCONbits.BRG16=1; //baudrate en 16bits
     TXSTAbits.SYNC=0; //mode asynchrone
@@ -25,7 +25,7 @@ void initRS232() //baud=9600, 8bits donnï¿½es, pas de bit de paritï¿½, un bit de
 
 
 }
-void initInterruption()
+void initInterruption(void)
 {
    RCONbits.IPEN=0; //toutes les interruptions ont la mÃªme prioritÃ©
    INTCONbits.GIE=1; //autorise les interruptions
@@ -37,7 +37,8 @@ void initInterruption()
    INTCONbits.TMR0IE = 1; //autoriser l'interrpution Timer0
 }
 
-void initClock(void){
+void initClock(void)
+{
 
     //On regle la frequence d'horloge sur 8MHz
     OSCCONbits.IRCF0 = 1;
@@ -76,6 +77,9 @@ void initPWM(void){
     CCP1CONbits.DC1B1 = 0;
     CCP1CONbits.DC1B0 = 0;
 
+
+    TRISAbits.RA6=0; //les bits sont à défaut à 0, mais c'est un rappel: il ne faut pas oublier que RA6 et RA7 sont utilisés pour indiquer le sens de rotation des moteurs
+    TRISAbits.RA7=0;
     //On met les deux moteurs Ã  0
     CCPR1L = 0;
     CCPR2L = 0;
