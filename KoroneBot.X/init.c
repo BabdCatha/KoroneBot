@@ -3,10 +3,10 @@
 char tamponEcritureTelecommande[2]={0x31, 0x00};
 void initTelecommandeSonar(void)
 {
-    TRISCbits.RC3=1; //SCL et SDA en entrÃ©e
+    TRISCbits.RC3=1; //SCL et SDA en entree
     TRISCbits.RC4=1;
-    MI2CInit(); //initialise certains paramï¿½tres I2C
-    SONAR_Write(0xE0, 0x51);
+    MI2CInit(); //initialise certains parametres I2C
+    SONAR_Write(0xE1, 0x51);
     Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande); //signifie ï¿½ U4(PIC16F1824) que l'on est en mode rï¿½ception et pas en mode test
 }
 
@@ -16,11 +16,11 @@ void initRS232(void) //baud=9600, 8bits donnï¿½es, pas de bit de paritï¿½, un bi
     TXSTAbits.SYNC=0; //mode asynchrone
     TXSTAbits.BRGH=1; //mode grande vitesse
 
-    //3 premiers paramï¿½tres => baudrate=Fosc/(4(n+1)) oï¿½ n=SPBRGH:SPBRG
-    SPBRG=208; //baudrate=9600 b/s => n=207.33333 arrondi au supï¿½rieur => n=208
+    //3 premiers parametres => baudrate=Fosc/(4(n+1)) ou n=SPBRGH:SPBRG
+    SPBRG=208; //baudrate=9600 b/s => n=207.33333 arrondi au superieur => n=208
     SPBRGH=0;
-    TRISCbits.RC6=1; //TX en entrï¿½e
-    RCSTAbits.SPEN=1; //validation port sï¿½rie
+    TRISCbits.RC6=1; //TX en entree
+    RCSTAbits.SPEN=1; //validation port serie
 
 
 
@@ -105,7 +105,7 @@ void initADC(void){
     ADCON1bits.PCFG = 12;//configuration des ANx en A ou D
 
     ADCON2bits.ACQT = 3;
-    ADCON2bits.ADCS = 4;
+    ADCON2bits.ADCS = 1;//Tad = 8Mhz/ADCS > 0.7us
     ADCON2bits.ADFM = 0;//on justifie à gauche, on ignore les deux bits de poids faible
 
     ADCON0bits.CHS = 2;

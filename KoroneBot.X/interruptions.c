@@ -1,4 +1,5 @@
 #include "interruptions.h"
+#include "MI2C.h"
 #include <stdio.h>
 
 typedef unsigned char bool;
@@ -63,10 +64,10 @@ void HighISR(void)
         if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
         {
             etatGlobal.phase=1;
-            CCPR1L=1; //ï¿½ remplir epï¿½rimentalement
+            CCPR1L=1; //a remplir experimentalement
             CCPR2L=2;
-            PORTAbits.RA6=; //sens de rotation
-            PORTAbits.RA7=;
+            PORTAbits.RA6=1; //sens de rotation
+            PORTAbits.RA7=1;
             //vitesse PWM telle que 30cm.s-1 sur chaque moteur en marche avant
         }
         //FIN TELECOMMANDE
@@ -92,7 +93,7 @@ void HighISR(void)
 
         //SONAR
         //mesure en cm car commande 0x51
-        etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
+        etatGlobal.distanceSonar=SONAR_Read(0xE1, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
         SONAR_Write(0xE0, 0x51); //on demande une nouvelle mesure qui sera prête à lire à la prochaine interruption TIMER0, 100ms plus tard
         //NB: la fonction SONAR_Write s'occupe d'indiquer que l'on écrit au registre 0 du sonar, il suffit de lui spécifier la commande que l'on veut y écrire
         //FIN SONAR
@@ -104,8 +105,8 @@ void HighISR(void)
             compteurPhase2=0;
             CCPR1L=3; //à déterminer empiriquement
             CCPR2L=4; //à déterminer empiriquement
-            PORTAbits.RA6=; //sens de rotation
-            PORTAbits.RA7=;
+            PORTAbits.RA6=0; //sens de rotation
+            PORTAbits.RA7=0;
         }
         else if(etatGlobal.phase==2) //phase 2/rotation
         {
@@ -115,8 +116,8 @@ void HighISR(void)
                 compteurPhase2=0;
                 CCPR1L=5; //à déterminer empiriquement
                 CCPR2L=6; //à déterminer empiriquement
-                PORTAbits.RA6=; //sens de rotation
-                PORTAbits.RA7=;
+                PORTAbits.RA6=0; //sens de rotation
+                PORTAbits.RA7=0;
             }
             else
             {
