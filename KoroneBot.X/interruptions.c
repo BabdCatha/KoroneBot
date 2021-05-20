@@ -1,33 +1,19 @@
 #include "interruptions.h"
-#include "MI2C.h"
 #include <stdio.h>
 
-typedef unsigned char bool;
-#define true    1
-#define false   0
 
 
 
-//Tension minimale de la batterie
-#define UMIN 0x9A
 
-//valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de la rotation du robot en phase 2
-#define dureeRotation 50
 
-//valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de l'avancée rectiligne du robot en phase 2
-#define dureeRectiligne 100
-typedef struct{
-    char phase; //-1<=>batterie trop déchargée; 0<=>idel; 1<=>phase 1; 2<=>phase2 rotation; 3<=>phase2 avancï¿½e rectiligne
-    bool initialisationEnCours;
-    int distanceSonar; //en cm car mesure avec commande 0x51
-    unsigned char VBatNum;
-    float VBatReel;
-    int VBatPartEnt;
-    int VBatPartDec;
-}etat;
+
 
 etat etatGlobal={0, true, 0, 12, 0.0, 0, 0};
 
+
+char texte[]="VBAT : XX.XX, phase = X\r\n\0";
+unsigned char longueur=25;
+unsigned char position=0;
 
 /* Variable servant a effectuer les mesures
  sur l'ADC une fois sur dix seulement*/
@@ -42,6 +28,8 @@ unsigned char mesures[4];
 //variable servant à définir la durée de la rotation, puis de l'avancée rectiligne en phase 2
 unsigned char compteurPhase2;
 
+char tamponLectureTelecommande[3]; //pour 0x31 puis 0x3y puis 00(='\0')
+char compteurSerie=0; //jusque 20 (2s)
 
 #pragma code HighVector=0x08
 void IntHighVector(void)
@@ -50,8 +38,6 @@ void IntHighVector(void)
 }
 #pragma code
 
-char tamponLectureTelecommande[3]; //pour 0x31 puis 0x3y puis 00(='\0')
-char compteurSerie=0; //jusque 20 (2s)
 
 
 #pragma interrupt HighISR
@@ -64,8 +50,8 @@ void HighISR(void)
         if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
         {
             etatGlobal.phase=1;
-            CCPR1L=1; //a remplir experimentalement
-            CCPR2L=2;
+            CCPR1L=VIT_CONTRAT_RECT+OFFSET_CCPR1L;
+            CCPR2L=VIT_CONTRAT_RECT;
             PORTAbits.RA6=1; //sens de rotation
             PORTAbits.RA7=1;
             //vitesse PWM telle que 30cm.s-1 sur chaque moteur en marche avant
@@ -74,16 +60,30 @@ void HighISR(void)
         INTCONbits.INT0IF=0; //doit ï¿½tre mis ï¿½ 0 manuellement
     }else if(INTCONbits.TMR0IF){
         //Si Timer0 s'est declenche
-        
-
+       
         //On surveille l'etat de la batterie
         survBatterie();
       
         //RS232
-        if(compteurSerie==20)
+        if(compteurSerie>=20)
         {
             compteurSerie=0;
-            printf("Valeur batterie: %d.%d V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBatPartEnt, etatGlobal.VBatPartDec, etatGlobal.initialisationEnCours, etatGlobal.phase);
+            position=0;
+            texte[7] = etatGlobal.VBatPartEnt/10 + 0x30;
+            texte[8] = (etatGlobal.VBatPartEnt%10) + 0x30;
+            texte[10] = etatGlobal.VBatPartDec/10 + 0x30;
+            texte[11] = (etatGlobal.VBatPartDec%10) + 0x30;
+            texte[22] = etatGlobal.phase + 0x30;
+            TXREG = texte[position];
+            while(position<=longueur)
+            {
+                while(!PIR1bits.TXIF)
+                {}
+                PIR1bits.TXIF = 0;
+                position++;
+                TXREG =texte[position];
+            }
+            //printf("Valeur batterie: %d.%d V, Initialisation finie: %d, Phase:%d\r\n", etatGlobal.VBatPartEnt, etatGlobal.VBatPartDec, etatGlobal.initialisationEnCours, etatGlobal.phase);
         }
         else
         {
@@ -93,7 +93,7 @@ void HighISR(void)
 
         //SONAR
         //mesure en cm car commande 0x51
-        etatGlobal.distanceSonar=SONAR_Read(0xE1, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
+        etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
         SONAR_Write(0xE0, 0x51); //on demande une nouvelle mesure qui sera prête à lire à la prochaine interruption TIMER0, 100ms plus tard
         //NB: la fonction SONAR_Write s'occupe d'indiquer que l'on écrit au registre 0 du sonar, il suffit de lui spécifier la commande que l'on veut y écrire
         //FIN SONAR
@@ -103,9 +103,9 @@ void HighISR(void)
         {
             etatGlobal.phase=2;//phase 2/rotation
             compteurPhase2=0;
-            CCPR1L=3; //à déterminer empiriquement
-            CCPR2L=4; //à déterminer empiriquement
-            PORTAbits.RA6=0; //sens de rotation
+            CCPR1L=VIT_ROTATION;
+            CCPR2L=VIT_ROTATION;
+            PORTAbits.RA6=1; //sens de rotation
             PORTAbits.RA7=0;
         }
         else if(etatGlobal.phase==2) //phase 2/rotation
@@ -114,10 +114,10 @@ void HighISR(void)
             {
                 etatGlobal.phase=3; //phase 2/rectiligne
                 compteurPhase2=0;
-                CCPR1L=5; //à déterminer empiriquement
-                CCPR2L=6; //à déterminer empiriquement
-                PORTAbits.RA6=0; //sens de rotation
-                PORTAbits.RA7=0;
+                CCPR1L=VIT_CONTRAT_RECT+OFFSET_CCPR1L;
+                CCPR2L=VIT_CONTRAT_RECT;
+                PORTAbits.RA6=1; //sens de rotation
+                PORTAbits.RA7=1;
             }
             else
             {
@@ -159,17 +159,20 @@ void survBatterie(void){
             /*On fait la moyenne de cette maniere
              pour eviter un eventuel overflow*/
             etatGlobal.VBatNum=0;
-            etatGlobal.VBatNum += mesures[0]/4;
-            etatGlobal.VBatNum += mesures[1]/4;
-            etatGlobal.VBatNum += mesures[2]/4;
-            etatGlobal.VBatNum += mesures[3]/4;
-            etatGlobal.VBatReel = ((float)etatGlobal.VBatNum)*3.2*5.0/1023.0; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
-            etatGlobal.VBatPartEnt=etatGlobal.VBatReel; //on ne peut pas printf des float car la bibliothèque ne le permet pas (cela doublerait sa taille d'implémenter cette fonctionnalité, ainsi elle n'est pas disponible pour le PIC18F2520)
+            etatGlobal.VBatNum += mesures[0];
+            etatGlobal.VBatNum += mesures[1];
+            etatGlobal.VBatNum += mesures[2];
+            etatGlobal.VBatNum += mesures[3];
+            etatGlobal.VBatNum /=4;
+            etatGlobal.VBatReel = ((float)etatGlobal.VBatNum)*3.2*5.0/255.0; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
+            etatGlobal.VBatPartEnt=(int)etatGlobal.VBatReel; //on ne peut pas printf des float car la bibliothèque ne le permet pas (cela doublerait sa taille d'implémenter cette fonctionnalité, ainsi elle n'est pas disponible pour le PIC18F2520)
             etatGlobal.VBatPartDec=(etatGlobal.VBatReel-etatGlobal.VBatPartEnt)*100; //deux chiffres après la virgule
             //Si la tension est trop faible
             if(etatGlobal.VBatNum <= UMIN){
                 etatGlobal.phase=-1;
+                PORTBbits.RB5=1;
             }
+            nbMesures=0;
         }
 
         //On relance une mesure de l'ADC

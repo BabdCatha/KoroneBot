@@ -8,7 +8,7 @@
 #pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
 
 
-
+extern etat etatGlobal;
 void main(void) {
 
     initClock();
@@ -18,8 +18,8 @@ void main(void) {
     initTelecommandeSonar();
     initInterruption();
     initRS232();
-    //etatGlobal.initialisationEnCours=false;
-    //etatGlobal.phase=0;
+    etatGlobal.initialisationEnCours=false;
+    etatGlobal.phase=0;
 
     //On lance une premiere mesure
     ADCON0bits.GO = 1;
