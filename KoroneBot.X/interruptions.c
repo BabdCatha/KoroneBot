@@ -8,7 +8,7 @@
 
 
 
-etat etatGlobal={0, true, 0, 12, 0.0, 0, 0};
+etat etatGlobal={0, true, 0, 12, 0.0, 0, 0, 0};
 
 
 char texte[]="VBAT : XX.XX, phase = X\r\n\0";
@@ -26,7 +26,7 @@ unsigned char mesures[4];
 
 
 //variable servant à définir la durée de la rotation, puis de l'avancée rectiligne en phase 2
-unsigned char compteurPhase2;
+unsigned char compteurPhase;
 
 char tamponLectureTelecommande[3]; //pour 0x31 puis 0x3y puis 00(='\0')
 char compteurSerie=0; //jusque 20 (2s)
@@ -47,7 +47,7 @@ void HighISR(void)
     {
         //TELECOMMANDE
         Lire_i2c_Telecom(0xA2, tamponLectureTelecommande);
-        if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
+        if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150 && etatGlobal.phase!=-1) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
         {
             etatGlobal.phase=1;
             CCPR1L=VIT_CONTRAT_RECT+OFFSET_CCPR1L;
@@ -55,6 +55,8 @@ void HighISR(void)
             PORTAbits.RA6=1; //sens de rotation
             PORTAbits.RA7=1;
             //vitesse PWM telle que 30cm.s-1 sur chaque moteur en marche avant
+            etatGlobal.affichageLED = etatGlobal.affichageLED & 0b11111101;
+            etatGlobal.affichageLED = etatGlobal.affichageLED | 0b11000100;
         }
         //FIN TELECOMMANDE
         INTCONbits.INT0IF=0; //doit ï¿½tre mis ï¿½ 0 manuellement
@@ -65,7 +67,7 @@ void HighISR(void)
         survBatterie();
       
         //RS232
-        if(compteurSerie>=20)
+        if(compteurSerie==20)
         {
             compteurSerie=0;
             position=0;
@@ -91,6 +93,14 @@ void HighISR(void)
         }
         //FIN RS232
 
+        //AFFICHAGE LED
+        if(compteurADC==9) //on profite du compteur ADC qui permet de compteur des intervalles d'une seconde (rien ne sert d'actualiser l'affichage LED trop rapidement)
+        {
+            Write_PCF8574(0b01000000, ~etatGlobal.affichageLED);
+        }
+        //FIN AFFICHAGE LED
+
+
         //SONAR
         //mesure en cm car commande 0x51
         etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
@@ -102,7 +112,9 @@ void HighISR(void)
         if(etatGlobal.phase==1 && etatGlobal.distanceSonar<40)
         {
             etatGlobal.phase=2;//phase 2/rotation
-            compteurPhase2=0;
+            etatGlobal.affichageLED = etatGlobal.affichageLED & 0b11111011;
+            etatGlobal.affichageLED = etatGlobal.affichageLED | 0b10001000;
+            compteurPhase=0;
             CCPR1L=VIT_ROTATION;
             CCPR2L=VIT_ROTATION;
             PORTAbits.RA6=1; //sens de rotation
@@ -110,10 +122,12 @@ void HighISR(void)
         }
         else if(etatGlobal.phase==2) //phase 2/rotation
         {
-            if(compteurPhase2==dureeRotation)
+            if(compteurPhase==dureeRotation)
             {
-                etatGlobal.phase=3; //phase 2/rectiligne
-                compteurPhase2=0;
+                etatGlobal.phase=3; //phase 3/rectiligne
+                etatGlobal.affichageLED = etatGlobal.affichageLED & 0b11110111;
+                etatGlobal.affichageLED = etatGlobal.affichageLED | 0b11010000;
+                compteurPhase=0;
                 CCPR1L=VIT_CONTRAT_RECT+OFFSET_CCPR1L;
                 CCPR2L=VIT_CONTRAT_RECT;
                 PORTAbits.RA6=1; //sens de rotation
@@ -121,20 +135,22 @@ void HighISR(void)
             }
             else
             {
-                compteurPhase2++;
+                compteurPhase++;
             }
         }
         else if(etatGlobal.phase==3)
         {
-            if(compteurPhase2==dureeRectiligne)
+            if(compteurPhase==dureeRectiligne)
             {
                 CCPR1L=0;
                 CCPR2L=0; //on arrête les moteurs (fin du déplacement du robot, retour en idle)
                 etatGlobal.phase=0;
+                etatGlobal.affichageLED = etatGlobal.affichageLED & 0b11101111;
+                etatGlobal.affichageLED = etatGlobal.affichageLED | 0b00000010;
             }
             else
             {
-                compteurPhase2++;
+                compteurPhase++;
             }
         }
         //FIN GESTION DES PHASES
@@ -170,6 +186,7 @@ void survBatterie(void){
             //Si la tension est trop faible
             if(etatGlobal.VBatNum <= UMIN){
                 etatGlobal.phase=-1;
+                etatGlobal.affichageLED=0b00100001;
                 PORTBbits.RB5=1;
             }
             nbMesures=0;

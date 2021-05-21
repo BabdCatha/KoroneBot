@@ -34,6 +34,7 @@ typedef struct{
     float VBatReel;
     int VBatPartEnt;
     int VBatPartDec;
+    char affichageLED;
 }etat;
 
 void HighISR(void);

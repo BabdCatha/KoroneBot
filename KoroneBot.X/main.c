@@ -18,9 +18,11 @@ void main(void) {
     initTelecommandeSonar();
     initInterruption();
     initRS232();
+    
     etatGlobal.initialisationEnCours=false;
     etatGlobal.phase=0;
-
+    etatGlobal.affichageLED=0b00000011;
+    Nop();
     //On lance une premiere mesure
     ADCON0bits.GO = 1;
 
