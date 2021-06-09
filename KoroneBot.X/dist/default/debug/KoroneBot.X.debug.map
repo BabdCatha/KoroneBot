@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Jun 08 10:24:58 2021
+Linker Map File - Created Wed Jun 09 15:13:34 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -12,12 +12,12 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
     .code_interruptions.o       code   0x0004b6    program   0x00044c
              .code_MI2C.o       code   0x000902    program   0x0003e4
          .code_i2c_eerr.o       code   0x000ce6    program   0x0000e4
-             .code_init.o       code   0x000dca    program   0x0000be
-               _cinit_scn       code   0x000e88    program   0x00009e
-         .code_i2c_eebw.o       code   0x000f26    program   0x00009a
-         .code_i2c_eeap.o       code   0x000fc0    program   0x000084
-         .code_i2c_writ.o       code   0x001044    program   0x000072
-             .code_main.o       code   0x0010b6    program   0x000032
+             .code_init.o       code   0x000dca    program   0x0000c0
+               _cinit_scn       code   0x000e8a    program   0x00009e
+         .code_i2c_eebw.o       code   0x000f28    program   0x00009a
+         .code_i2c_eeap.o       code   0x000fc2    program   0x000084
+         .code_i2c_writ.o       code   0x001046    program   0x000072
+             .code_main.o       code   0x0010b8    program   0x000030
          .code_fxd1616u.o       code   0x0010e8    program   0x00002c
                     .code       code   0x001114    program   0x000020
              _startup_scn       code   0x001134    program   0x00001c
@@ -104,8 +104,8 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
                   D1616SX   0x000342    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                   DA1616S   0x000312    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
               Detecte_i2c   0x000912    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-             EEAckPolling   0x000fc0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-              EEByteWrite   0x000f26    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EEAckPolling   0x000fc2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+              EEByteWrite   0x000f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
              EERandomRead   0x000ce6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
        Ecrire_i2c_Telecom   0x000b36    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                  FLO1632S   0x00002c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
@@ -124,7 +124,7 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
                  MI2CInit   0x000902    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                SONAR_Read   0x000958    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
               SONAR_Write   0x000a98    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 WriteI2C   0x001044    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                 WriteI2C   0x001046    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
             Write_PCF8574   0x000c80    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                  __FpExit   0x0003b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
                  __FpPack   0x0003e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
@@ -143,7 +143,7 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x001112    program     static                          
        ___return_lbl00001   0x00114e    program     static                          
-       ___return_lbl00002   0x000f24    program     static                          
+       ___return_lbl00002   0x000f26    program     static                          
         ___while_lbl00001   0x0010e4    program     static                          
         ___while_lbl00002   0x0010e6    program     static                          
                __config_0   0x300001    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
@@ -152,17 +152,17 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
                __config_3   0x300006    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                    __pa_0   0x000dbc    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x000fb2    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x001034    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __pa_0   0x000fb4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x001036    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
             __zero_memory   0x001114    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                _do_cinit   0x000e88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                _do_cinit   0x000e8a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  _startup   0x001134    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 compare_l   0x00112a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                copy_loop   0x000efa    program     static                          
-            copy_one_byte   0x000f00    program     static                          
-                     done   0x000f24    program     static                          
-             done_copying   0x000f0e    program     static                          
+                copy_loop   0x000efc    program     static                          
+            copy_one_byte   0x000f02    program     static                          
+                     done   0x000f26    program     static                          
+             done_copying   0x000f10    program     static                          
                   endloop   0x00110e    program     static                          
                   initADC   0x000e5e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
                 initClock   0x000e1a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
@@ -220,8 +220,8 @@ Linker Map File - Created Tue Jun 08 10:24:58 2021
                      loop   0x0010f2    program     static                          
                    loop_h   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    loop_l   0x00112c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     main   0x0010b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
-                     test   0x000ea2    program     static                          
+                     main   0x0010b8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+                     test   0x000ea4    program     static                          
                zero_block   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -540,19 +540,19 @@ tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Docume
                   initPWM   0x000e24    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
                initTimer0   0x000e4c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
                   initADC   0x000e5e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                _do_cinit   0x000e88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000ea2    program     static                          
-                copy_loop   0x000efa    program     static                          
-            copy_one_byte   0x000f00    program     static                          
-             done_copying   0x000f0e    program     static                          
-                     done   0x000f24    program     static                          
-       ___return_lbl00002   0x000f24    program     static                          
-              EEByteWrite   0x000f26    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x000fb2    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EEAckPolling   0x000fc0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                   __pa_0   0x001034    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                 WriteI2C   0x001044    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-                     main   0x0010b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+                _do_cinit   0x000e8a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x000ea4    program     static                          
+                copy_loop   0x000efc    program     static                          
+            copy_one_byte   0x000f02    program     static                          
+             done_copying   0x000f10    program     static                          
+                     done   0x000f26    program     static                          
+       ___return_lbl00002   0x000f26    program     static                          
+              EEByteWrite   0x000f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x000fb4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EEAckPolling   0x000fc2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __pa_0   0x001036    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                 WriteI2C   0x001046    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                     main   0x0010b8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
         ___while_lbl00001   0x0010e4    program     static                          
        ___return_lbl00000   0x0010e6    program     static                          
         ___while_lbl00002   0x0010e6    program     static                          

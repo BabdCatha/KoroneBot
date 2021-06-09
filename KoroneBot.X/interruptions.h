@@ -43,7 +43,7 @@ typedef struct{
     char affichageLED; //affichageLED RA6:RA7:PHASE-1:PHASE2LIN:PHASE2ROT:PHASE1:PHASE0IDLE:INITOK
                        //             D8 :D7 :D6     :D5       :D4       :D3    :D2        :D1
                        //affichageLED est envoyé au PCF8574
-}etat;
+}etat; //en mode RELEASE, la structure d'état global est toujours mise à jour, mais certaines informations ne sont pas utilisées car elles sont destinées à être envoyées par RS232
 
 void HighISR(void);
 

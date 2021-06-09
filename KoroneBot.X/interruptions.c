@@ -1,13 +1,16 @@
 #include "interruptions.h"
 #include <stdio.h>
+#include "init.h" //pour savoir si on est en DEBUG ou en RELEASE
 
 //NB: tous les compteurs utilisent l'interruption de timer0 (base de temps de 100ms) pour gérer leurs évènements
 //NB: pour la signification des registres CCPRXL et RAX lors de la gestion des phases, voir interruptions.h
 etat etatGlobal={0, true, 0, 12, 0.0, 0, 0, 0};
 
+#ifndef RELEASE
 char texte[]="INIT FINI: XXX, VBAT : XX.XX, phase = X\r\n"; //chaîne mise à jour avec des informations de etatGlobal avant l'envoi par RS232
 unsigned char longueur=40; //variables pour parcourir texte
-unsigned char position=0 //de 0 à longueur inclus on envoie bien longueur + 1 caractères
+unsigned char position=0; //de 0 à longueur inclus on envoie bien longueur + 1 caractères
+#endif
 
 /* Variable servant a effectuer les mesures
  sur l'ADC une fois sur dix seulement*/
@@ -95,7 +98,8 @@ void HighISR(void)
             compteurADC++;
         }
         //FIN ADC
-        
+
+#ifndef RELEASE
         //RS232
         if(compteurSerie==20)
         {
@@ -141,6 +145,8 @@ void HighISR(void)
             compteurSerie++;
         }
         //FIN RS232
+#endif
+
 
         //AFFICHAGE LED
         //addresse du PCF8574 en binaire pour expliciter la correspondance avec la datasheet (A2/A1/A0 reliée à la masse)

@@ -5,8 +5,10 @@
 #include "init.h"
 
 #pragma config OSC = INTIO67
-#pragma config PBADEN = OFF, WDT = OFF, LVP = OFF, DEBUG = ON
-
+#pragma config PBADEN = OFF, WDT = OFF, LVP = OFF
+#ifndef RELEASE
+#pragma config DEBUG = ON
+#endif
 
 extern etat etatGlobal; //structure mise à jour au fur et à mesure du fonctionnement du robot
 void main(void) {
@@ -15,7 +17,9 @@ void main(void) {
     initPWM(); //F=1kHz et rapport cyclique < 50%
     initADC(); //Tad=1µs
     initTelecommandeSonar(); //entre autres, dire à U4(PIC16F1824) qu'on est en mode réception et pas en mode test
+#ifndef RELEASE
     initRS232(); //9600 baud, 8 bits, 1 stop, pas de bit de parité
+#endif
     initTimer0(); //base temporelle de 100ms
     initInterruption(); //Interruption INT0 (télécommande), TMR0 (overflow)
     

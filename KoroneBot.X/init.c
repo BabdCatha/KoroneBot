@@ -14,7 +14,7 @@ void initTelecommandeSonar(void)
     SONAR_Write(0xE0, 0x51); //on demande une première mesure au Sonar
     Ecrire_i2c_Telecom(0xA2, tamponEcritureTelecommande); //signifie à U4(PIC16F1824) que l'on est en mode réception et pas en mode test
 }
-
+#ifndef RELEASE
 void initRS232(void) //baud=9600, 8bits données, pas de bit de parité, un bit de stop, on ne fait que transmettre
 {
     BAUDCONbits.BRG16=1; //baudrate en 16bits
@@ -27,12 +27,9 @@ void initRS232(void) //baud=9600, 8bits données, pas de bit de parité, un bit de
     TRISCbits.RC6=1; //TX en entrée
     RCSTAbits.SPEN=1; //validation port série
     TXSTAbits.TXEN=1; //transmission série autorisée
-
-
-
-
-
 }
+#endif
+
 void initInterruption(void)
 {
    RCONbits.IPEN=0; //toutes les interruptions ont la même priorité
