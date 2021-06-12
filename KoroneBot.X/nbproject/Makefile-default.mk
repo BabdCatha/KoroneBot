@@ -93,7 +93,7 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -101,7 +101,7 @@ ${OBJECTDIR}/interruptions.o: interruptions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/interruptions.o.d 
 	@${RM} ${OBJECTDIR}/interruptions.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/interruptions.o   interruptions.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/interruptions.o   interruptions.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/interruptions.o 
 	@${FIXDEPS} "${OBJECTDIR}/interruptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -109,7 +109,7 @@ ${OBJECTDIR}/init.o: init.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/init.o.d 
 	@${RM} ${OBJECTDIR}/init.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/init.o   init.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/init.o   init.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/init.o 
 	@${FIXDEPS} "${OBJECTDIR}/init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -117,7 +117,7 @@ ${OBJECTDIR}/_ext/1472/MI2C.o: ../MI2C.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/MI2C.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/MI2C.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/MI2C.o   ../MI2C.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/MI2C.o   ../MI2C.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/MI2C.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/MI2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -126,7 +126,7 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -134,7 +134,7 @@ ${OBJECTDIR}/interruptions.o: interruptions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/interruptions.o.d 
 	@${RM} ${OBJECTDIR}/interruptions.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/interruptions.o   interruptions.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/interruptions.o   interruptions.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/interruptions.o 
 	@${FIXDEPS} "${OBJECTDIR}/interruptions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -142,7 +142,7 @@ ${OBJECTDIR}/init.o: init.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/init.o.d 
 	@${RM} ${OBJECTDIR}/init.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/init.o   init.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/init.o   init.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/init.o 
 	@${FIXDEPS} "${OBJECTDIR}/init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -150,7 +150,7 @@ ${OBJECTDIR}/_ext/1472/MI2C.o: ../MI2C.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1472 
 	@${RM} ${OBJECTDIR}/_ext/1472/MI2C.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/MI2C.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/MI2C.o   ../MI2C.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1472/MI2C.o   ../MI2C.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1472/MI2C.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1472/MI2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	

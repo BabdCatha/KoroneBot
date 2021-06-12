@@ -57,7 +57,8 @@ void HighISR(void)
         }
         //FIN TELECOMMANDE
         INTCONbits.INT0IF=0; //doit être mis à 0 manuellement
-    }else if(INTCONbits.TMR0IF){ //Si Timer0 s'est declenche
+    }
+    if(INTCONbits.TMR0IF){ //Si Timer0 s'est declenche
 
 
         //On surveille l'etat de la batterie
@@ -76,7 +77,7 @@ void HighISR(void)
                 etatGlobal.VBatNum += mesures[2];
                 etatGlobal.VBatNum += mesures[3];
                 etatGlobal.VBatNum /= 4;
-                etatGlobal.VBatReel = (((float)etatGlobal.VBatNum)*5.0/255.0)*3.5; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
+                etatGlobal.VBatReel = (((float)etatGlobal.VBatNum)*5.0/255.0)*3.3; //on multiplie VBatNum par un coefficient qui revient à défaire la quantification du CAN puis à défaire l'affaiblissement du pont diviseur de tension
                 etatGlobal.VBatPartEnt=(int)etatGlobal.VBatReel; //on ne peut pas printf des float car la bibliothèque ne le permet pas (cela doublerait sa taille d'implémenter cette fonctionnalité, ainsi elle n'est pas disponible pour le PIC18F2520)
                 etatGlobal.VBatPartDec=(etatGlobal.VBatReel-etatGlobal.VBatPartEnt)*100; //deux chiffres après la virgule
                 if(etatGlobal.VBatNum <= UMIN){//Si la tension est trop faible
@@ -88,16 +89,17 @@ void HighISR(void)
 
                 }
                 nbMesures=0;
-        }
-        //fin surveillance batterie
+            }
+
 
         //DEBUT ADC
         //On relance une mesure de l'ADC
-        ADCON0bits.GO = 1;
+            ADCON0bits.GO = 1;
         }else{
             compteurADC++;
         }
         //FIN ADC
+        //fin surveillance batterie
 
 #ifndef RELEASE
         //RS232

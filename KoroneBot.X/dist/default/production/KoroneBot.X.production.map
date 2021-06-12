@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Wed Jun 09 15:16:51 2021
+Linker Map File - Created Thu Jun 10 09:10:50 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -9,45 +9,45 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
                HighVector       code   0x000008    program   0x000006
                    .cinit    romdata   0x00000e    program   0x00001a
                      PROG       code   0x000028    program   0x00048e
-    .code_interruptions.o       code   0x0004b6    program   0x00044c
-             .code_MI2C.o       code   0x000902    program   0x0003e4
-         .code_i2c_eerr.o       code   0x000ce6    program   0x0000e4
-             .code_init.o       code   0x000dca    program   0x0000c0
-               _cinit_scn       code   0x000e8a    program   0x00009e
-         .code_i2c_eebw.o       code   0x000f28    program   0x00009a
-         .code_i2c_eeap.o       code   0x000fc2    program   0x000084
-         .code_i2c_writ.o       code   0x001046    program   0x000072
-             .code_main.o       code   0x0010b8    program   0x000030
-         .code_fxd1616u.o       code   0x0010e8    program   0x00002c
-                    .code       code   0x001114    program   0x000020
-             _startup_scn       code   0x001134    program   0x00001c
-         .code_i2c_idle.o       code   0x001150    program   0x00000e
-         .romdata_c018i.o    romdata   0x00115e    program   0x000000
-        .romdata___init.o    romdata   0x00115e    program   0x000000
-      .romdata_i2c_writ.o    romdata   0x00115e    program   0x000000
-      .romdata_i2c_idle.o    romdata   0x00115e    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x00115e    program   0x000000
-          .idata_main.o_i    romdata   0x00115e    program   0x000000
-          .romdata_main.o    romdata   0x00115e    program   0x000000
-      .romdata_i2c_eerr.o    romdata   0x00115e    program   0x000000
-      .romdata_i2c_eebw.o    romdata   0x00115e    program   0x000000
- .romdata_interruptions.o    romdata   0x00115e    program   0x000000
-      .romdata_i2c_eeap.o    romdata   0x00115e    program   0x000000
-             .stringtable    romdata   0x00115e    program   0x000000
-          .romdata_init.o    romdata   0x00115e    program   0x000000
-          .romdata_MI2C.o    romdata   0x00115e    program   0x000000
- .idata_interruptions.o_i    romdata   0x00115e    program   0x00003e
-          .idata_init.o_i    romdata   0x00119c    program   0x000002
-         .idata_c018i.o_i    romdata   0x00119e    program   0x000000
-        .idata___init.o_i    romdata   0x00119e    program   0x000000
-            .code_c018i.o       code   0x00119e    program   0x000000
-      .idata_i2c_writ.o_i    romdata   0x00119e    program   0x000000
-      .idata_i2c_idle.o_i    romdata   0x00119e    program   0x000000
-          .idata_MI2C.o_i    romdata   0x00119e    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x00119e    program   0x000000
-      .idata_i2c_eeap.o_i    romdata   0x00119e    program   0x000000
-      .idata_i2c_eerr.o_i    romdata   0x00119e    program   0x000000
-      .idata_i2c_eebw.o_i    romdata   0x00119e    program   0x000000
+    .code_interruptions.o       code   0x0004b6    program   0x00044e
+             .code_MI2C.o       code   0x000904    program   0x0003e4
+         .code_i2c_eerr.o       code   0x000ce8    program   0x0000e4
+             .code_init.o       code   0x000dcc    program   0x0000c0
+               _cinit_scn       code   0x000e8c    program   0x00009e
+         .code_i2c_eebw.o       code   0x000f2a    program   0x00009a
+         .code_i2c_eeap.o       code   0x000fc4    program   0x000084
+         .code_i2c_writ.o       code   0x001048    program   0x000072
+             .code_main.o       code   0x0010ba    program   0x000032
+         .code_fxd1616u.o       code   0x0010ec    program   0x00002c
+                    .code       code   0x001118    program   0x000020
+             _startup_scn       code   0x001138    program   0x00001c
+         .code_i2c_idle.o       code   0x001154    program   0x00000e
+         .romdata_c018i.o    romdata   0x001162    program   0x000000
+        .romdata___init.o    romdata   0x001162    program   0x000000
+      .romdata_i2c_writ.o    romdata   0x001162    program   0x000000
+      .romdata_i2c_idle.o    romdata   0x001162    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x001162    program   0x000000
+          .idata_main.o_i    romdata   0x001162    program   0x000000
+          .romdata_main.o    romdata   0x001162    program   0x000000
+      .romdata_i2c_eerr.o    romdata   0x001162    program   0x000000
+      .romdata_i2c_eebw.o    romdata   0x001162    program   0x000000
+ .romdata_interruptions.o    romdata   0x001162    program   0x000000
+      .romdata_i2c_eeap.o    romdata   0x001162    program   0x000000
+             .stringtable    romdata   0x001162    program   0x000000
+          .romdata_init.o    romdata   0x001162    program   0x000000
+          .romdata_MI2C.o    romdata   0x001162    program   0x000000
+ .idata_interruptions.o_i    romdata   0x001162    program   0x00003e
+          .idata_init.o_i    romdata   0x0011a0    program   0x000002
+         .idata_c018i.o_i    romdata   0x0011a2    program   0x000000
+        .idata___init.o_i    romdata   0x0011a2    program   0x000000
+            .code_c018i.o       code   0x0011a2    program   0x000000
+      .idata_i2c_writ.o_i    romdata   0x0011a2    program   0x000000
+      .idata_i2c_idle.o_i    romdata   0x0011a2    program   0x000000
+          .idata_MI2C.o_i    romdata   0x0011a2    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x0011a2    program   0x000000
+      .idata_i2c_eeap.o_i    romdata   0x0011a2    program   0x000000
+      .idata_i2c_eerr.o_i    romdata   0x0011a2    program   0x000000
+      .idata_i2c_eebw.o_i    romdata   0x0011a2    program   0x000000
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
@@ -87,11 +87,11 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00119d      
+                            0x000000    0x0011a1      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300005    0x300006      
-            4514 out of 33048 program addresses used, program memory utilization is 13%
+            4518 out of 33048 program addresses used, program memory utilization is 13%
 
 
 
@@ -103,11 +103,11 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
                  D1616SOK   0x00032c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                   D1616SX   0x000342    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                   DA1616S   0x000312    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-              Detecte_i2c   0x000912    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-             EEAckPolling   0x000fc2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-              EEByteWrite   0x000f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EERandomRead   0x000ce6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-       Ecrire_i2c_Telecom   0x000b36    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              Detecte_i2c   0x000914    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+             EEAckPolling   0x000fc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+              EEByteWrite   0x000f2a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EERandomRead   0x000ce8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+       Ecrire_i2c_Telecom   0x000b38    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                  FLO1632S   0x00002c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
                  FLO1632U   0x000028    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
                     FPA32   0x0001d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
@@ -115,17 +115,17 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
                     FPM32   0x0000f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
                     FPS32   0x0001d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
                  FXD1616S   0x000300    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0010e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD1616U   0x0010ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
                   HighISR   0x0004b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                   INT3216   0x00034c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  IdleI2C   0x001150    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                  IdleI2C   0x001154    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
             IntHighVector   0x000008    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-         Lire_i2c_Telecom   0x000bd4    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 MI2CInit   0x000902    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-               SONAR_Read   0x000958    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              SONAR_Write   0x000a98    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 WriteI2C   0x001046    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-            Write_PCF8574   0x000c80    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+         Lire_i2c_Telecom   0x000bd6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 MI2CInit   0x000904    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+               SONAR_Read   0x00095a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              SONAR_Write   0x000a9a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 WriteI2C   0x001048    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+            Write_PCF8574   0x000c82    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                  __FpExit   0x0003b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
                  __FpPack   0x0003e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
             __FpReturnNaN   0x0003aa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
@@ -139,38 +139,38 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
               __FpUnPackA   0x00045a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
               __FpUnPackB   0x00048a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x0010e6    program     static                          
+       ___return_lbl00000   0x0010ea    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x001112    program     static                          
-       ___return_lbl00001   0x00114e    program     static                          
-       ___return_lbl00002   0x000f26    program     static                          
-        ___while_lbl00001   0x0010e4    program     static                          
-        ___while_lbl00002   0x0010e6    program     static                          
+       ___return_lbl00000   0x001116    program     static                          
+       ___return_lbl00001   0x001152    program     static                          
+       ___return_lbl00002   0x000f28    program     static                          
+        ___while_lbl00001   0x0010e6    program     static                          
+        ___while_lbl00002   0x0010ea    program     static                          
                __config_0   0x300001    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_1   0x300003    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_2   0x300005    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_3   0x300006    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x000dbc    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x000fb4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x001036    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-            __zero_memory   0x001114    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                _do_cinit   0x000e8a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __pa_0   0x000dbe    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x000fb6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x001038    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+            __zero_memory   0x001118    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                _do_cinit   0x000e8c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x001134    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x00112a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                copy_loop   0x000efc    program     static                          
-            copy_one_byte   0x000f02    program     static                          
-                     done   0x000f26    program     static                          
-             done_copying   0x000f10    program     static                          
-                  endloop   0x00110e    program     static                          
-                  initADC   0x000e5e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initClock   0x000e1a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-         initInterruption   0x000e0e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initPWM   0x000e24    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initRS232   0x000dfa    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-    initTelecommandeSonar   0x000dca    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-               initTimer0   0x000e4c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                 _startup   0x001138    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x00112e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                copy_loop   0x000efe    program     static                          
+            copy_one_byte   0x000f04    program     static                          
+                     done   0x000f28    program     static                          
+             done_copying   0x000f12    program     static                          
+                  endloop   0x001112    program     static                          
+                  initADC   0x000e60    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initClock   0x000e1c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+         initInterruption   0x000e10    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initPWM   0x000e26    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initRS232   0x000dfc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+    initTelecommandeSonar   0x000dcc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+               initTimer0   0x000e4e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
                  jANotInf   0x000116    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
                  jANotInf   0x0001fc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
                  jANotInf   0x000070    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
@@ -216,13 +216,13 @@ Linker Map File - Created Wed Jun 09 15:16:51 2021
                  jWNotNeg   0x0002a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
                     jZero   0x000372    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
                jZero1and2   0x0003ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                     loop   0x001144    program     static                          
-                     loop   0x0010f2    program     static                          
-                   loop_h   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x00112c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     main   0x0010b8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
-                     test   0x000ea4    program     static                          
-               zero_block   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     loop   0x001148    program     static                          
+                     loop   0x0010f6    program     static                          
+                   loop_h   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x001130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     main   0x0010ba    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+                     test   0x000ea6    program     static                          
+               zero_block   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -524,51 +524,51 @@ tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Docume
                  jUnpkBNZ   0x0004a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                   jUnpkB2   0x0004ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                   HighISR   0x0004b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                 MI2CInit   0x000902    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              Detecte_i2c   0x000912    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-               SONAR_Read   0x000958    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              SONAR_Write   0x000a98    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-       Ecrire_i2c_Telecom   0x000b36    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-         Lire_i2c_Telecom   0x000bd4    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-            Write_PCF8574   0x000c80    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-             EERandomRead   0x000ce6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x000dbc    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-    initTelecommandeSonar   0x000dca    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initRS232   0x000dfa    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-         initInterruption   0x000e0e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initClock   0x000e1a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initPWM   0x000e24    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-               initTimer0   0x000e4c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initADC   0x000e5e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                _do_cinit   0x000e8a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000ea4    program     static                          
-                copy_loop   0x000efc    program     static                          
-            copy_one_byte   0x000f02    program     static                          
-             done_copying   0x000f10    program     static                          
-                     done   0x000f26    program     static                          
-       ___return_lbl00002   0x000f26    program     static                          
-              EEByteWrite   0x000f28    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x000fb4    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EEAckPolling   0x000fc2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                   __pa_0   0x001036    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                 WriteI2C   0x001046    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-                     main   0x0010b8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
-        ___while_lbl00001   0x0010e4    program     static                          
-       ___return_lbl00000   0x0010e6    program     static                          
-        ___while_lbl00002   0x0010e6    program     static                          
-                 FXD1616U   0x0010e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0010f2    program     static                          
-                  endloop   0x00110e    program     static                          
-       ___return_lbl00000   0x001112    program     static                          
-            __zero_memory   0x001114    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_h   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               zero_block   0x001122    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                compare_l   0x00112a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x00112c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                 _startup   0x001134    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x001144    program     static                          
-       ___return_lbl00001   0x00114e    program     static                          
-                  IdleI2C   0x001150    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                 MI2CInit   0x000904    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              Detecte_i2c   0x000914    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+               SONAR_Read   0x00095a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              SONAR_Write   0x000a9a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+       Ecrire_i2c_Telecom   0x000b38    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+         Lire_i2c_Telecom   0x000bd6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+            Write_PCF8574   0x000c82    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+             EERandomRead   0x000ce8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x000dbe    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+    initTelecommandeSonar   0x000dcc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initRS232   0x000dfc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+         initInterruption   0x000e10    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initClock   0x000e1c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initPWM   0x000e26    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+               initTimer0   0x000e4e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initADC   0x000e60    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                _do_cinit   0x000e8c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x000ea6    program     static                          
+                copy_loop   0x000efe    program     static                          
+            copy_one_byte   0x000f04    program     static                          
+             done_copying   0x000f12    program     static                          
+                     done   0x000f28    program     static                          
+       ___return_lbl00002   0x000f28    program     static                          
+              EEByteWrite   0x000f2a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x000fb6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EEAckPolling   0x000fc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __pa_0   0x001038    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                 WriteI2C   0x001048    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                     main   0x0010ba    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+        ___while_lbl00001   0x0010e6    program     static                          
+       ___return_lbl00000   0x0010ea    program     static                          
+        ___while_lbl00002   0x0010ea    program     static                          
+                 FXD1616U   0x0010ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0010f6    program     static                          
+                  endloop   0x001112    program     static                          
+       ___return_lbl00000   0x001116    program     static                          
+            __zero_memory   0x001118    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_h   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               zero_block   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                compare_l   0x00112e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x001130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 _startup   0x001138    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001148    program     static                          
+       ___return_lbl00001   0x001152    program     static                          
+                  IdleI2C   0x001154    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
                __config_0   0x300001    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_1   0x300003    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_2   0x300005    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c

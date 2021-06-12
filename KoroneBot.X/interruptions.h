@@ -22,7 +22,7 @@ typedef unsigned char bool;
 #define VIT_ROTATION 40 //pour la phase 2
 
 //valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de la rotation du robot en phase 2
-#define dureeRotation 12
+#define dureeRotation 9
 
 //valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de l'avancée rectiligne du robot en phase 3 (1 metre)
 #define dureeRectiligne 31
