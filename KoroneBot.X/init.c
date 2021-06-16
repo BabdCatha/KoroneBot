@@ -112,7 +112,7 @@ void initADC(void){
     ADCON2bits.ADCS = 1; //Tad=1µs
     ADCON2bits.ADFM = 0;//on justifie à gauche, on ignore les deux bits de poids faible
 
-    ADCON0bits.CHS = 2;  //sélection de la configuration des ports de PORTB en A/D
+    ADCON0bits.CHS = 2;  //sélection de la patte AN2 comme entrée pour le CAN
     ADCON0bits.ADON = 1; //ADC en fonctionnement
     ADCON0bits.GO = 1;   //On lance une premiere mesure
 

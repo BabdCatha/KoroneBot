@@ -29,7 +29,7 @@ void main(void) {
     Nop(); //signifie "n'exécute aucune instruction", et nécessaire sinon les trois lignes précédentes ne sont pas lues (voir rapport)
 
     while(1){
-        Sleep(); //passe en mode IDLE quand il n'y a rien à faire, jusqu'à la prochaine interruption
+        //Sleep(); //passe en mode IDLE quand il n'y a rien à faire, jusqu'à la prochaine interruption
         //ATTENTION: ce mode IDLE n'est pas modélisé par proteus, qui le agit TOUJOURS comme si on était en mode SLEEP complet
     }
 }
