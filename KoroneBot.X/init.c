@@ -95,7 +95,7 @@ void initTimer0(void){
     T0CONbits.T08BIT = 0; //timer 0 en mode 16 bits
     T0CONbits.T0CS = 0; //utilisation de l'horloge interne
     T0CONbits.PSA = 0; //on utilise le prescaler
-    T0CONbits.T0PS = 1; //prescaler de 4 (recharge de 15535 (0x3CAF)) pour une base de temps de 1ms
+    T0CONbits.T0PS = 1; //prescaler de 4 (recharge de 15535 (0x3CAF)) pour une base de temps de 100ms
 
     //On active le Timer0
     T0CONbits.TMR0ON = 1;
