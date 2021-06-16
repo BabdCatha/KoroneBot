@@ -21,6 +21,7 @@ unsigned char compteurADC = 0;
 unsigned char nbMesures = 0;
 unsigned char mesures[4];
 
+char compteurAppuiBouton=-1;
 
 //variable servant à définir la durée de la rotation, puis de l'avancée rectiligne en phase 2
 unsigned char compteurPhase;
@@ -44,7 +45,7 @@ void HighISR(void)
     {
         //TELECOMMANDE
         Lire_i2c_Telecom(0xA2, tamponLectureTelecommande);
-        if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150 && etatGlobal.phase!=-1) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
+        if(tamponLectureTelecommande[1]==0x33 && etatGlobal.distanceSonar>=150 && etatGlobal.phase==0) //signifie touche centre pressï¿½e et obstacle ï¿½ plus d'1m50
         {
             etatGlobal.phase=1;
             CCPR1L=VIT_CONTRAT_RECT+OFFSET_CCPR1L; //moteur gauche
@@ -54,12 +55,27 @@ void HighISR(void)
             //vitesse PWM telle que 30cm.s-1 sur chaque moteur en marche avant
             etatGlobal.affichageLED = etatGlobal.affichageLED & 0b11111101;
             etatGlobal.affichageLED = etatGlobal.affichageLED | 0b00000100;
+            compteurAppuiBouton=10;
+        }
+        else if(tamponLectureTelecommande[1]==0x33 && etatGlobal.phase>0 && compteurAppuiBouton==0)
+        {
+            CCPR1L=0;
+            CCPR2L=0; //on arrête les moteurs (fin du déplacement du robot, retour en idle)
+            etatGlobal.phase=0; //on peut remarquer qu'on ne rentre jamais dans cette boucle si phase=-1, donc il n'y a pas de problème à forcer phase à 0 ici
+            PORTAbits.RA6=0; //sens de rotation
+            PORTAbits.RA7=0;
+            etatGlobal.affichageLED = etatGlobal.affichageLED & 0b00100001;
+            etatGlobal.affichageLED = etatGlobal.affichageLED | 0b00000010;
         }
         //FIN TELECOMMANDE
         INTCONbits.INT0IF=0; //doit être mis à 0 manuellement
     }
     if(INTCONbits.TMR0IF){ //Si Timer0 s'est declenche
 
+        if(compteurAppuiBouton>0)
+        {
+            compteurAppuiBouton--;
+        }
 
         //On surveille l'etat de la batterie
         if(compteurADC == 9){
@@ -85,7 +101,7 @@ void HighISR(void)
                     CCPR1L=0;
                     CCPR2L=0;
                     etatGlobal.phase=-1;
-                    etatGlobal.affichageLED=0b00100001;
+                    etatGlobal.affichageLED=0b00100001; //c'est le seul endroit où l'on "force" la valeur de affichageLED sans passer par des ET/OU logiques
 
                 }
                 nbMesures=0;
@@ -157,10 +173,14 @@ void HighISR(void)
 
 
         //SONAR
-        //mesure en cm car commande 0x51
-        etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
-        SONAR_Write(0xE0, 0x51); //on demande une nouvelle mesure qui sera prête à lire à la prochaine interruption TIMER0, 100ms plus tard
-        //NB: la fonction SONAR_Write s'occupe d'indiquer que l'on écrit au registre 0 du sonar, il suffit de lui spécifier la commande que l'on veut y écrire
+        if(etatGlobal.phase==0 || etatGlobal.phase==1) //on n'a pas besoin du sonar dans les autres phases
+        {
+            //mesure en cm car commande 0x51
+            etatGlobal.distanceSonar=SONAR_Read(0xE0, 2); //0xE0 est l'adresse par défaut du Sonar et si l'on regarde la fonction SONAR_Read, elle lit d'abord l'octet fort (position 2) puis l'octet faible (position 3)
+            SONAR_Write(0xE0, 0x51); //on demande une nouvelle mesure qui sera prête à lire à la prochaine interruption TIMER0, 100ms plus tard
+            //NB: la fonction SONAR_Write s'occupe d'indiquer que l'on écrit au registre 0 du sonar, il suffit de lui spécifier la commande que l'on veut y écrire
+
+        }
         //FIN SONAR
         
         //GESTION DES PHASES

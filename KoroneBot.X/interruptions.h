@@ -14,15 +14,15 @@ typedef unsigned char bool;
 #define UMIN 0x66 //correspond à la valeur lue au CAN, lorsque la tension du pont diviseur de tension est telle que VBAT=7.2V (limite choisie pour le bon fonctionnement du robot
 //attention, on ne lit que les 8 MSB du CAN
 
-//pour indication, valeur max pour CCPRxL: 62, qui correspond à un rapport cyclique de 50%
+//pour indication, valeur max pour CCPRxL: 62, qui correspond à un rapport cyclique de 50% (car CCPRXL:DCXB1:DCXB0 = 250 au maximum (50%), ce qui divisé par 4 donne 62)
 //de plus, CCPR1L et RA7 contrôlent la chenille gauche, et CCPR2L et RA6 contrôlent la chenille droite
 //RA6/7 à 0 fait tourner la chenille correspondante telle que le robot va vers l'avant, et à 1 fait tourner la chenille correspondante telle que le robot va vers l'arrière
 #define VIT_CONTRAT_RECT  50// correspond à 30cm.s-1 pour la phase de ligne droite
-#define OFFSET_CCPR1L 8 //la chenille gauche tourne moins bien que la droite, on vient corriger ça
+#define OFFSET_CCPR1L 10 //la chenille gauche tourne moins bien que la droite, on vient corriger ça
 #define VIT_ROTATION 40 //pour la phase 2
 
 //valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de la rotation du robot en phase 2
-#define dureeRotation 9
+#define dureeRotation 10
 
 //valeur qui, multipliée par 0.1 (100ms) donne la durée en seconde de l'avancée rectiligne du robot en phase 3 (1 metre)
 #define dureeRectiligne 31

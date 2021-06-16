@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Thu Jun 10 09:10:50 2021
+Linker Map File - Created Mon Jun 14 15:53:07 2021
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -8,46 +8,46 @@ Linker Map File - Created Thu Jun 10 09:10:50 2021
            .code___init.o       code   0x000006    program   0x000002
                HighVector       code   0x000008    program   0x000006
                    .cinit    romdata   0x00000e    program   0x00001a
-                     PROG       code   0x000028    program   0x00048e
-    .code_interruptions.o       code   0x0004b6    program   0x00044e
-             .code_MI2C.o       code   0x000904    program   0x0003e4
-         .code_i2c_eerr.o       code   0x000ce8    program   0x0000e4
-             .code_init.o       code   0x000dcc    program   0x0000c0
-               _cinit_scn       code   0x000e8c    program   0x00009e
-         .code_i2c_eebw.o       code   0x000f2a    program   0x00009a
-         .code_i2c_eeap.o       code   0x000fc4    program   0x000084
-         .code_i2c_writ.o       code   0x001048    program   0x000072
-             .code_main.o       code   0x0010ba    program   0x000032
-         .code_fxd1616u.o       code   0x0010ec    program   0x00002c
-                    .code       code   0x001118    program   0x000020
-             _startup_scn       code   0x001138    program   0x00001c
-         .code_i2c_idle.o       code   0x001154    program   0x00000e
-         .romdata_c018i.o    romdata   0x001162    program   0x000000
-        .romdata___init.o    romdata   0x001162    program   0x000000
-      .romdata_i2c_writ.o    romdata   0x001162    program   0x000000
-      .romdata_i2c_idle.o    romdata   0x001162    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x001162    program   0x000000
-          .idata_main.o_i    romdata   0x001162    program   0x000000
-          .romdata_main.o    romdata   0x001162    program   0x000000
-      .romdata_i2c_eerr.o    romdata   0x001162    program   0x000000
-      .romdata_i2c_eebw.o    romdata   0x001162    program   0x000000
- .romdata_interruptions.o    romdata   0x001162    program   0x000000
-      .romdata_i2c_eeap.o    romdata   0x001162    program   0x000000
-             .stringtable    romdata   0x001162    program   0x000000
-          .romdata_init.o    romdata   0x001162    program   0x000000
-          .romdata_MI2C.o    romdata   0x001162    program   0x000000
- .idata_interruptions.o_i    romdata   0x001162    program   0x00003e
-          .idata_init.o_i    romdata   0x0011a0    program   0x000002
-         .idata_c018i.o_i    romdata   0x0011a2    program   0x000000
-        .idata___init.o_i    romdata   0x0011a2    program   0x000000
-            .code_c018i.o       code   0x0011a2    program   0x000000
-      .idata_i2c_writ.o_i    romdata   0x0011a2    program   0x000000
-      .idata_i2c_idle.o_i    romdata   0x0011a2    program   0x000000
-          .idata_MI2C.o_i    romdata   0x0011a2    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x0011a2    program   0x000000
-      .idata_i2c_eeap.o_i    romdata   0x0011a2    program   0x000000
-      .idata_i2c_eerr.o_i    romdata   0x0011a2    program   0x000000
-      .idata_i2c_eebw.o_i    romdata   0x0011a2    program   0x000000
+    .code_interruptions.o       code   0x000028    program   0x0004bc
+                     PROG       code   0x0004e4    program   0x00048e
+             .code_MI2C.o       code   0x000972    program   0x0003e4
+         .code_i2c_eerr.o       code   0x000d56    program   0x0000e4
+             .code_init.o       code   0x000e3a    program   0x0000c0
+               _cinit_scn       code   0x000efa    program   0x00009e
+         .code_i2c_eebw.o       code   0x000f98    program   0x00009a
+         .code_i2c_eeap.o       code   0x001032    program   0x000084
+         .code_i2c_writ.o       code   0x0010b6    program   0x000072
+             .code_main.o       code   0x001128    program   0x000032
+         .code_fxd1616u.o       code   0x00115a    program   0x00002c
+                    .code       code   0x001186    program   0x000020
+             _startup_scn       code   0x0011a6    program   0x00001c
+         .code_i2c_idle.o       code   0x0011c2    program   0x00000e
+         .romdata_c018i.o    romdata   0x0011d0    program   0x000000
+        .romdata___init.o    romdata   0x0011d0    program   0x000000
+      .romdata_i2c_writ.o    romdata   0x0011d0    program   0x000000
+      .romdata_i2c_idle.o    romdata   0x0011d0    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x0011d0    program   0x000000
+          .idata_main.o_i    romdata   0x0011d0    program   0x000000
+          .romdata_main.o    romdata   0x0011d0    program   0x000000
+      .romdata_i2c_eerr.o    romdata   0x0011d0    program   0x000000
+      .romdata_i2c_eebw.o    romdata   0x0011d0    program   0x000000
+ .romdata_interruptions.o    romdata   0x0011d0    program   0x000000
+      .romdata_i2c_eeap.o    romdata   0x0011d0    program   0x000000
+             .stringtable    romdata   0x0011d0    program   0x000000
+          .romdata_init.o    romdata   0x0011d0    program   0x000000
+ .idata_interruptions.o_i    romdata   0x0011d0    program   0x00003f
+          .romdata_MI2C.o    romdata   0x0011d0    program   0x000000
+          .idata_init.o_i    romdata   0x00120f    program   0x000002
+         .idata_c018i.o_i    romdata   0x001211    program   0x000000
+        .idata___init.o_i    romdata   0x001211    program   0x000000
+      .idata_i2c_writ.o_i    romdata   0x001211    program   0x000000
+      .idata_i2c_idle.o_i    romdata   0x001211    program   0x000000
+          .idata_MI2C.o_i    romdata   0x001211    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x001211    program   0x000000
+      .idata_i2c_eeap.o_i    romdata   0x001211    program   0x000000
+      .idata_i2c_eerr.o_i    romdata   0x001211    program   0x000000
+      .idata_i2c_eebw.o_i    romdata   0x001211    program   0x000000
+            .code_c018i.o       code   0x001212    program   0x000000
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
@@ -55,30 +55,30 @@ Linker Map File - Created Thu Jun 10 09:10:50 2021
                 MATH_DATA      udata   0x000000       data   0x000014
               HighISR_tmp      udata   0x000014       data   0x00000c
                  .tmpdata      udata   0x000020       data   0x000002
-   .idata_interruptions.o      idata   0x000080       data   0x00003e
-           .udata_c018i.o      udata   0x0000be       data   0x00000a
-   .udata_interruptions.o      udata   0x0000c8       data   0x000008
-            .idata_init.o      idata   0x0000d0       data   0x000002
-          .idata___init.o      idata   0x0000d2       data   0x000000
-          .udata___init.o      udata   0x0000d2       data   0x000000
-        .idata_i2c_writ.o      idata   0x0000d2       data   0x000000
-        .udata_i2c_writ.o      udata   0x0000d2       data   0x000000
-        .idata_i2c_idle.o      idata   0x0000d2       data   0x000000
-        .udata_i2c_idle.o      udata   0x0000d2       data   0x000000
-        .idata_fxd1616u.o      idata   0x0000d2       data   0x000000
-        .udata_fxd1616u.o      udata   0x0000d2       data   0x000000
-        .idata_i2c_eerr.o      idata   0x0000d2       data   0x000000
-        .udata_i2c_eerr.o      udata   0x0000d2       data   0x000000
-        .idata_i2c_eebw.o      idata   0x0000d2       data   0x000000
-        .udata_i2c_eebw.o      udata   0x0000d2       data   0x000000
-        .idata_i2c_eeap.o      idata   0x0000d2       data   0x000000
-        .udata_i2c_eeap.o      udata   0x0000d2       data   0x000000
-            .idata_MI2C.o      idata   0x0000d2       data   0x000000
-            .udata_MI2C.o      udata   0x0000d2       data   0x000000
-            .udata_init.o      udata   0x0000d2       data   0x000000
-            .idata_main.o      idata   0x0000d2       data   0x000000
-            .udata_main.o      udata   0x0000d2       data   0x000000
-           .idata_c018i.o      idata   0x0000d2       data   0x000000
+   .idata_interruptions.o      idata   0x000080       data   0x00003f
+           .udata_c018i.o      udata   0x0000bf       data   0x00000a
+   .udata_interruptions.o      udata   0x0000c9       data   0x000008
+            .idata_init.o      idata   0x0000d1       data   0x000002
+          .idata___init.o      idata   0x0000d3       data   0x000000
+          .udata___init.o      udata   0x0000d3       data   0x000000
+        .idata_i2c_writ.o      idata   0x0000d3       data   0x000000
+        .udata_i2c_writ.o      udata   0x0000d3       data   0x000000
+        .idata_i2c_idle.o      idata   0x0000d3       data   0x000000
+        .udata_i2c_idle.o      udata   0x0000d3       data   0x000000
+        .idata_fxd1616u.o      idata   0x0000d3       data   0x000000
+        .udata_fxd1616u.o      udata   0x0000d3       data   0x000000
+        .idata_i2c_eerr.o      idata   0x0000d3       data   0x000000
+        .udata_i2c_eerr.o      udata   0x0000d3       data   0x000000
+        .idata_i2c_eebw.o      idata   0x0000d3       data   0x000000
+        .udata_i2c_eebw.o      udata   0x0000d3       data   0x000000
+        .idata_i2c_eeap.o      idata   0x0000d3       data   0x000000
+        .udata_i2c_eeap.o      udata   0x0000d3       data   0x000000
+            .idata_MI2C.o      idata   0x0000d3       data   0x000000
+            .udata_MI2C.o      udata   0x0000d3       data   0x000000
+            .udata_init.o      udata   0x0000d3       data   0x000000
+            .idata_main.o      idata   0x0000d3       data   0x000000
+            .udata_main.o      udata   0x0000d3       data   0x000000
+           .idata_c018i.o      idata   0x0000d3       data   0x000000
                    .stack      udata   0x000500       data   0x000100
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
@@ -87,142 +87,142 @@ Linker Map File - Created Thu Jun 10 09:10:50 2021
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0011a1      
+                            0x000000    0x001210      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300005    0x300006      
-            4518 out of 33048 program addresses used, program memory utilization is 13%
+            4629 out of 33048 program addresses used, program memory utilization is 14%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D1616S   0x000322    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x000330    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00032c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x000342    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x000312    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-              Detecte_i2c   0x000914    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-             EEAckPolling   0x000fc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-              EEByteWrite   0x000f2a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EERandomRead   0x000ce8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-       Ecrire_i2c_Telecom   0x000b38    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 FLO1632S   0x00002c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632U   0x000028    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPA32   0x0001d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    FPD32   0x000052    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    FPM32   0x0000f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                    FPS32   0x0001d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 FXD1616S   0x000300    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0010ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                  HighISR   0x0004b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                  INT3216   0x00034c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  IdleI2C   0x001154    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                   D1616S   0x0007de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0007ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0007e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0007fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x0007ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+              Detecte_i2c   0x000982    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+             EEAckPolling   0x001032    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+              EEByteWrite   0x000f98    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EERandomRead   0x000d56    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+       Ecrire_i2c_Telecom   0x000ba6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 FLO1632S   0x0004e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632U   0x0004e4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPA32   0x000690    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    FPD32   0x00050e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    FPM32   0x0005b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                    FPS32   0x00068e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 FXD1616S   0x0007bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x00115a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                  HighISR   0x000028    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                  INT3216   0x000808    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  IdleI2C   0x0011c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
             IntHighVector   0x000008    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-         Lire_i2c_Telecom   0x000bd6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 MI2CInit   0x000904    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-               SONAR_Read   0x00095a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              SONAR_Write   0x000a9a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 WriteI2C   0x001048    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-            Write_PCF8574   0x000c82    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-                 __FpExit   0x0003b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x0003e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-            __FpReturnNaN   0x0003aa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x0003bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x0003d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x0003c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x0003dc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x0003b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x0003d0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x00043a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x00045a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x00048a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+         Lire_i2c_Telecom   0x000c44    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 MI2CInit   0x000972    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+               SONAR_Read   0x0009c8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              SONAR_Write   0x000b08    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 WriteI2C   0x0010b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+            Write_PCF8574   0x000cf0    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+                 __FpExit   0x000872    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x00089e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x000866    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x000878    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x000890    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x00087e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x000898    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x000874    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x00088c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x0008f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x000916    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x000946    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x0010ea    program     static                          
+       ___return_lbl00000   0x001158    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x001116    program     static                          
-       ___return_lbl00001   0x001152    program     static                          
-       ___return_lbl00002   0x000f28    program     static                          
-        ___while_lbl00001   0x0010e6    program     static                          
-        ___while_lbl00002   0x0010ea    program     static                          
+       ___return_lbl00000   0x001184    program     static                          
+       ___return_lbl00001   0x0011c0    program     static                          
+       ___return_lbl00002   0x000f96    program     static                          
+        ___while_lbl00001   0x001154    program     static                          
+        ___while_lbl00002   0x001158    program     static                          
                __config_0   0x300001    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_1   0x300003    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_2   0x300005    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_3   0x300006    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x000dbe    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x000fb6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x001038    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-            __zero_memory   0x001118    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                _do_cinit   0x000e8c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __pa_0   0x000e2c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x001024    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x0010a6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+            __zero_memory   0x001186    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                _do_cinit   0x000efa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x001138    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x00112e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                copy_loop   0x000efe    program     static                          
-            copy_one_byte   0x000f04    program     static                          
-                     done   0x000f28    program     static                          
-             done_copying   0x000f12    program     static                          
-                  endloop   0x001112    program     static                          
-                  initADC   0x000e60    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initClock   0x000e1c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-         initInterruption   0x000e10    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initPWM   0x000e26    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initRS232   0x000dfc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-    initTelecommandeSonar   0x000dcc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-               initTimer0   0x000e4e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                 jANotInf   0x000116    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 jANotInf   0x0001fc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotInf   0x000070    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                 jANotNeg   0x000290    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jANotZero   0x000084    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-              jAandWsetup   0x000260    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jAltBexp   0x00024e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jBANotInf   0x0001f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jBNotInf   0x00020a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jBothFinite   0x000124    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x000130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-            jDifOrPosSign   0x00021e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    jExit   0x0003a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-               jFinalSign   0x0002f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jHaveZero   0x00012c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jI2F16Beg   0x00003c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    jLoop   0x000388    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jLoop   0x0000ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jLoopExit   0x000398    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                     jMax   0x00035c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x00036a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x000360    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jNext   0x0000d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jNoAdjust   0x0000d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-             jNotBothZero   0x000222    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                  jNotInf   0x000378    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jPkLoop   0x0003f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x00043a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x000422    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x00040c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x0003c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jShiftDone   0x0002b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftLoop   0x0002aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jSignDone   0x0002e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jSignedZero   0x00007a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                  jUnpkA1   0x000464    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x00047c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x000472    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x000494    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x0004ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x0004a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x000486    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jWNotNeg   0x0002a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    jZero   0x000372    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-               jZero1and2   0x0003ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                     loop   0x001148    program     static                          
-                     loop   0x0010f6    program     static                          
-                   loop_h   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x001130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     main   0x0010ba    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
-                     test   0x000ea6    program     static                          
-               zero_block   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 _startup   0x0011a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x00119c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                copy_loop   0x000f6c    program     static                          
+            copy_one_byte   0x000f72    program     static                          
+                     done   0x000f96    program     static                          
+             done_copying   0x000f80    program     static                          
+                  endloop   0x001180    program     static                          
+                  initADC   0x000ece    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initClock   0x000e8a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+         initInterruption   0x000e7e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initPWM   0x000e94    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initRS232   0x000e6a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+    initTelecommandeSonar   0x000e3a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+               initTimer0   0x000ebc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                 jANotInf   0x0005d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 jANotInf   0x0006b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotInf   0x00052c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                 jANotNeg   0x00074c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jANotZero   0x000540    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+              jAandWsetup   0x00071c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jAltBexp   0x00070a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jBANotInf   0x0006ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jBNotInf   0x0006c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jBothFinite   0x0005e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x0005ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+            jDifOrPosSign   0x0006da    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    jExit   0x000864    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+               jFinalSign   0x0007b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jHaveZero   0x0005e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jI2F16Beg   0x0004f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    jLoop   0x000844    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x000568    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jLoopExit   0x000854    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x000818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x000826    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x00081c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jNext   0x00058e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jNoAdjust   0x00058c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+             jNotBothZero   0x0006de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                  jNotInf   0x000834    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jPkLoop   0x0008ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x0008f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x0008de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x0008c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x000882    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jShiftDone   0x000774    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftLoop   0x000766    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jSignDone   0x0007a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jSignedZero   0x000536    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                  jUnpkA1   0x000920    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x000938    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x00092e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x000950    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x000968    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x00095e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x000942    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jWNotNeg   0x000760    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    jZero   0x00082e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+               jZero1and2   0x000886    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                     loop   0x0011b6    program     static                          
+                     loop   0x001164    program     static                          
+                   loop_h   0x001194    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x00119e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     main   0x001128    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+                     test   0x000f14    program     static                          
+               zero_block   0x001194    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -428,19 +428,20 @@ Linker Map File - Created Thu Jun 10 09:10:50 2021
                   __tmp_0   0x000020       data     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
                   __tmp_1   0x000014       data     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
               compteurADC   0x0000bb       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-            compteurPhase   0x0000cc       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-            compteurSerie   0x0000bd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                curr_byte   0x0000c1       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x0000c3       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x0000c5       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+      compteurAppuiBouton   0x0000bd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+            compteurPhase   0x0000cd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+            compteurSerie   0x0000be       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                curr_byte   0x0000c2       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000c4       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000c6       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                etatGlobal   0x000080       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                  longueur   0x0000b9       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                  mesures   0x0000c8       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                  mesures   0x0000c9       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                 nbMesures   0x0000bc       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                  position   0x0000ba       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                     prom   0x0000be       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                     prom   0x0000bf       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+tamponEcritureTelecommande   0x0000d1       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+tamponLectureTelecommande   0x0000ce       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                     texte   0x00008f       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
 
 
@@ -453,122 +454,122 @@ tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Docume
                    __init   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
             IntHighVector   0x000008    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
        ___return_lbl00000   0x00000c    program     static                          
-                 FLO1632U   0x000028    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632S   0x00002c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                jI2F16Beg   0x00003c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPD32   0x000052    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                 jANotInf   0x000070    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-              jSignedZero   0x00007a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jANotZero   0x000084    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    jLoop   0x0000ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jNoAdjust   0x0000d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    jNext   0x0000d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    FPM32   0x0000f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 jANotInf   0x000116    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-              jBothFinite   0x000124    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jHaveZero   0x00012c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x000130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                    FPS32   0x0001d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    FPA32   0x0001d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jBANotInf   0x0001f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotInf   0x0001fc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jBNotInf   0x00020a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-            jDifOrPosSign   0x00021e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-             jNotBothZero   0x000222    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jAltBexp   0x00024e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jAandWsetup   0x000260    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotNeg   0x000290    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jWNotNeg   0x0002a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftLoop   0x0002aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftDone   0x0002b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jSignDone   0x0002e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jFinalSign   0x0002f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 FXD1616S   0x000300    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x000312    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x000322    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00032c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x000330    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x000342    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  INT3216   0x00034c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                     jMax   0x00035c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x000360    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x00036a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jZero   0x000372    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jNotInf   0x000378    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jLoop   0x000388    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                jLoopExit   0x000398    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jExit   0x0003a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-            __FpReturnNaN   0x0003aa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpExit   0x0003b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x0003b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x0003bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x0003c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x0003c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jZero1and2   0x0003ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x0003d0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x0003d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x0003dc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x0003e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                  jPkLoop   0x0003f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x00040c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x000422    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x00043a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x00043a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x00045a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA1   0x000464    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x000472    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x00047c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x000486    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x00048a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x000494    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x0004a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x0004ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  HighISR   0x0004b6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                 MI2CInit   0x000904    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              Detecte_i2c   0x000914    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-               SONAR_Read   0x00095a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-              SONAR_Write   0x000a9a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-       Ecrire_i2c_Telecom   0x000b38    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-         Lire_i2c_Telecom   0x000bd6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-            Write_PCF8574   0x000c82    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
-             EERandomRead   0x000ce8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-                   __pa_0   0x000dbe    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
-    initTelecommandeSonar   0x000dcc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initRS232   0x000dfc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-         initInterruption   0x000e10    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                initClock   0x000e1c    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initPWM   0x000e26    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-               initTimer0   0x000e4e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                  initADC   0x000e60    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                _do_cinit   0x000e8c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000ea6    program     static                          
-                copy_loop   0x000efe    program     static                          
-            copy_one_byte   0x000f04    program     static                          
-             done_copying   0x000f12    program     static                          
-                     done   0x000f28    program     static                          
-       ___return_lbl00002   0x000f28    program     static                          
-              EEByteWrite   0x000f2a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-                   __pa_0   0x000fb6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
-             EEAckPolling   0x000fc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                   __pa_0   0x001038    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
-                 WriteI2C   0x001048    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
-                     main   0x0010ba    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
-        ___while_lbl00001   0x0010e6    program     static                          
-       ___return_lbl00000   0x0010ea    program     static                          
-        ___while_lbl00002   0x0010ea    program     static                          
-                 FXD1616U   0x0010ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0010f6    program     static                          
-                  endloop   0x001112    program     static                          
-       ___return_lbl00000   0x001116    program     static                          
-            __zero_memory   0x001118    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_h   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               zero_block   0x001126    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                compare_l   0x00112e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   loop_l   0x001130    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                 _startup   0x001138    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x001148    program     static                          
-       ___return_lbl00001   0x001152    program     static                          
-                  IdleI2C   0x001154    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
+                  HighISR   0x000028    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                 FLO1632U   0x0004e4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632S   0x0004e8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                jI2F16Beg   0x0004f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPD32   0x00050e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                 jANotInf   0x00052c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+              jSignedZero   0x000536    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jANotZero   0x000540    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    jLoop   0x000568    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jNoAdjust   0x00058c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    jNext   0x00058e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    FPM32   0x0005b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 jANotInf   0x0005d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+              jBothFinite   0x0005e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jHaveZero   0x0005e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x0005ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                    FPS32   0x00068e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    FPA32   0x000690    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jBANotInf   0x0006ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotInf   0x0006b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jBNotInf   0x0006c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+            jDifOrPosSign   0x0006da    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+             jNotBothZero   0x0006de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jAltBexp   0x00070a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jAandWsetup   0x00071c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotNeg   0x00074c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jWNotNeg   0x000760    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftLoop   0x000766    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftDone   0x000774    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jSignDone   0x0007a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jFinalSign   0x0007b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 FXD1616S   0x0007bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x0007ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x0007de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0007e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0007ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0007fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  INT3216   0x000808    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x000818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x00081c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x000826    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jZero   0x00082e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x000834    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x000844    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x000854    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jExit   0x000864    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+            __FpReturnNaN   0x000866    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpExit   0x000872    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x000874    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x000878    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x00087e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x000882    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jZero1and2   0x000886    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x00088c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x000890    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x000898    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x00089e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jPkLoop   0x0008ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x0008c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x0008de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x0008f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x0008f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x000916    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x000920    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x00092e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x000938    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x000942    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x000946    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x000950    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x00095e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x000968    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 MI2CInit   0x000972    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              Detecte_i2c   0x000982    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+               SONAR_Read   0x0009c8    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+              SONAR_Write   0x000b08    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+       Ecrire_i2c_Telecom   0x000ba6    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+         Lire_i2c_Telecom   0x000c44    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+            Write_PCF8574   0x000cf0    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\MI2C.c
+             EERandomRead   0x000d56    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+                   __pa_0   0x000e2c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eerr.c
+    initTelecommandeSonar   0x000e3a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initRS232   0x000e6a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+         initInterruption   0x000e7e    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                initClock   0x000e8a    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initPWM   0x000e94    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+               initTimer0   0x000ebc    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                  initADC   0x000ece    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
+                _do_cinit   0x000efa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x000f14    program     static                          
+                copy_loop   0x000f6c    program     static                          
+            copy_one_byte   0x000f72    program     static                          
+             done_copying   0x000f80    program     static                          
+                     done   0x000f96    program     static                          
+       ___return_lbl00002   0x000f96    program     static                          
+              EEByteWrite   0x000f98    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+                   __pa_0   0x001024    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eebw.c
+             EEAckPolling   0x001032    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                   __pa_0   0x0010a6    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_eeap.c
+                 WriteI2C   0x0010b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_writ.c
+                     main   0x001128    program     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
+        ___while_lbl00001   0x001154    program     static                          
+       ___return_lbl00000   0x001158    program     static                          
+        ___while_lbl00002   0x001158    program     static                          
+                 FXD1616U   0x00115a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x001164    program     static                          
+                  endloop   0x001180    program     static                          
+       ___return_lbl00000   0x001184    program     static                          
+            __zero_memory   0x001186    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_h   0x001194    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               zero_block   0x001194    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                compare_l   0x00119c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   loop_l   0x00119e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 _startup   0x0011a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0011b6    program     static                          
+       ___return_lbl00001   0x0011c0    program     static                          
+                  IdleI2C   0x0011c2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\i2c\i2c_idle.c
                __config_0   0x300001    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_1   0x300003    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
                __config_2   0x300005    program     static C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\main.c
@@ -578,8 +579,8 @@ tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Docume
                 __FPFLAGS   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                  __AARGB7   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB1   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB5   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB4   0x000005       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -608,45 +609,46 @@ tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Docume
                  position   0x0000ba       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
               compteurADC   0x0000bb       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
                 nbMesures   0x0000bc       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-            compteurSerie   0x0000bd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-                     prom   0x0000be       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x0000c1       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x0000c3       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x0000c5       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                  mesures   0x0000c8       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-            compteurPhase   0x0000cc       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-tamponLectureTelecommande   0x0000cd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
-tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
-                    PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+      compteurAppuiBouton   0x0000bd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+            compteurSerie   0x0000be       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+                     prom   0x0000bf       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x0000c2       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000c4       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000c6       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                  mesures   0x0000c9       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+            compteurPhase   0x0000cd       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+tamponLectureTelecommande   0x0000ce       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\interruptions.c
+tamponEcritureTelecommande   0x0000d1       data     extern C:\Users\drsav\Documents\Interface_design\Repertoire_de_travail\KoroneBot.X\init.c
                 PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     PORTE   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 PORTEbits   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                 DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                 DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                 DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                  OSCTUNE   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
               OSCTUNEbits   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                  OSCTUNE   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -655,23 +657,23 @@ tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Docum
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  IPR2bits   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    EEDATA   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     EEADR   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                TXSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                TXSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TXREG   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     RCREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     SPBRG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    SPBRGH   0x000fb0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                T3CONbits   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     T3CON   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                T3CONbits   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TMR3L   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TMR3H   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     CMCON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -711,28 +713,28 @@ tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Docum
                    ADRESH   0x000fc4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   SSPCON2   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
               SSPCON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-              SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                  SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+              SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
               SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                  SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    SSPADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    SSPBUF   0x000fc9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    T2CON   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 T2CONbits   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    T2CON   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                       PR2   0x000fcb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      TMR2   0x000fcc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                 T1CONbits   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TMR1L   0x000fce       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     TMR1H   0x000fcf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    WDTCON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                WDTCONbits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               LVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   HLVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
               HLVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    LVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               LVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    OSCCON   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -741,8 +743,8 @@ tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Docum
                     TMR0H   0x000fd7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    STATUS   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     FSR2H   0x000fda       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    PLUSW2   0x000fdb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   PREINC2   0x000fdc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -750,18 +752,18 @@ tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Docum
                  POSTINC2   0x000fde       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     INDF2   0x000fdf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                       BSR   0x000fe0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    FSR1L   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      FSR1   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    FSR1L   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     FSR1H   0x000fe2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    PLUSW1   0x000fe3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   PREINC1   0x000fe4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  POSTDEC1   0x000fe5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                  POSTINC1   0x000fe6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     INDF1   0x000fe7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     WREG   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                         W   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                    FSR0L   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     WREG   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      FSR0   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                    FSR0L   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     FSR0H   0x000fea       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    PLUSW0   0x000feb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   PREINC0   0x000fec       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
@@ -772,24 +774,24 @@ tamponEcritureTelecommande   0x0000d0       data     extern C:\Users\drsav\Docum
                   INTCON3   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
               INTCON2bits   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   INTCON2   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                INTCONbits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     PRODL   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                     PRODH   0x000ff4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    TABLAT   0x000ff5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   TBLPTRL   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   TBLPTRH   0x000ff7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                   TBLPTRU   0x000ff8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                       PC   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                       PCL   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                       PC   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    PCLATH   0x000ffa       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    PCLATU   0x000ffb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-               STKPTRbits   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                    STKPTR   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
-                      TOS   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+               STKPTRbits   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      TOSL   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
+                      TOS   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      TOSH   0x000ffe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
                      TOSU   0x000fff       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f2520.asm
 
